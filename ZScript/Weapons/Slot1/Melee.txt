@@ -12,6 +12,10 @@ CLASS MeleeAttack : Actor
 	Property splatterblood : splatterblood;
 	Bool uppercut;
 	Property uppercut : uppercut;
+	bool bonushealth;
+	Property bonushealth : bonushealth;
+	bool MeleeKnockback;
+	Property MeleeKnockback : MeleeKnockback;
 	Default
 	{
 		Radius 12;
@@ -35,6 +39,7 @@ CLASS MeleeAttack : Actor
 		MeleeAttack.berserkdamage 55;
 		MeleeAttack.pickbarrel TRUE;
 		MeleeAttack.dofatality TRUE;
+		MeleeAttack.MeleeKnockback TRUE;
 	}
 	Int DamageToDeal;
 	String DecalToPrint;
@@ -61,6 +66,24 @@ CLASS MeleeAttack : Actor
 				}
 			If(target && target.findinventory("powerstrength"))
 				{
+					If(victim && victim is "ExplosiveBarrel1")
+					{
+					
+					}
+					Else
+					{
+					If(victim && victim.bismonster && bonushealth)
+					{
+						If(random(1,2) == 1)
+						{
+							A_dropitem("HealthPlusFatalityBonus");
+						}
+						Else
+						{
+							A_dropitem("ArmorShardFatalityBonus");
+						}
+					}
+					}
 					//A_startsound("footmeat",3);
 					Damagetype = "Fatality";
 					If(target && target.findinventory("nofatality") || target && target.findinventory("hasagib") || !dofatality) {Damagetype = "ExtremePunches";}
@@ -113,6 +136,11 @@ CLASS MeleeAttack : Actor
 			victim.damagemobj(self, target, damagetodeal, damagetype);
 			
 			bmissile = false;
+			If(MeleeKnockback)
+				{
+					target.a_changevelocity(-15,0,0,CVF_RELATIVE);
+				}
+			
 			}
 			
 			return -1;
@@ -214,6 +242,7 @@ CLASS Meleeattackslide : MeleeAttack
 		//MeleeAttack.pickbarrel FALSE;
 		//MeleeAttack.dofatality FALSE;
 		MeleeAttack.uppercut TRUE;
+		MeleeAttack.MeleeKnockback FALSE;
 		Speed 40;
 			}
 			
@@ -325,6 +354,7 @@ CLASS MeleeAttackLeft : MeleeAttack
 				MeleeAttack.berserkdamage 75;
 				DamageType "Melee";
 				MeleeAttack.splatterblood TRUE;
+				MeleeAttack.bonushealth TRUE;
 			}
 		States
 			{
