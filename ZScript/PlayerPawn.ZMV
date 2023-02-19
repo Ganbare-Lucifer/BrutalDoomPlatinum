@@ -143,6 +143,11 @@ class Brutal_PlayerBase : PlayerPawn
 	bool notvoodoo;
 	bool previouschasecam;
 	
+	//Skulls
+	bool spawnwitharmor;
+	bool spawnberserked;
+	bool shockfactor;
+	
 	Default
     {
 		Player.DisplayName "ZMovement Player";
@@ -194,7 +199,30 @@ class Brutal_PlayerBase : PlayerPawn
 	//{
 	
 //	}
+		If(spawnwitharmor && !findinventory("powershield",TRUE) && health > 0)
+		{
+			GiveInventory("PowerShield2",1);
+			If(countinv("basicarmor") < 50)
+			{
+				takeinventory("basicarmor",50);
+				GiveInventory("mjolnirarmor",50);
+			}
+		}
 		
+		If(spawnberserked && !findinventory("powerstrength",TRUE) && health > 0)
+		{
+			GiveInventory("Berserk2",1);
+			If((health) < 50)
+			{
+				a_sethealth(100);
+			}
+		}
+		
+		
+		If(shockfactor && level.time % 5 == 0)
+		{
+			A_alertmonsters(0,AMF_TARGETEMITTER);
+		}
 		
 		//giveinventory("meathook",1);
 		If (self is "tacticaldoomer")
