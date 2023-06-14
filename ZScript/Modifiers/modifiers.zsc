@@ -197,3 +197,69 @@ class Modifier_Gunslinger : BDPModifier
 	}
 
 }
+
+
+class Modifier_OneUpmanship : BDPModifier
+{
+	Default
+	{
+		BDPModifier.Icon "BJBST00";
+		BDPModifier.DisplayName "One-Upmanship";
+		BDPModifier.Description "Soul Spheres grant extra lives";
+	}
+	Override void worldthingspawned(Worldevent e)
+	{
+	If(e.thing && e.thing.getclassname() == "LifeSphere")
+		{
+			Actor.spawn("LifeSphereOneUp",e.thing.pos);
+			E.thing.destroy();
+		}
+		
+	If(e.thing  && e.thing.getclassname() == "EnergySphere")
+		{
+			Actor.spawn("EnergySphereOneUp",e.thing.pos);
+			E.thing.destroy();
+		}
+	
+	}
+	override void WorldTick()
+	{
+		for(int i = 0; i < MAXPLAYERS; i++)
+		{
+			if(!PlayerInGame[i]) continue;
+			PlayerInfo plr = players[i];
+			if(!plr) continue;
+			
+			let dplr = Brutal_PlayerBase(plr.mo);
+			if(!dplr) continue;
+			
+			dplr.oneupmanship = true;
+		}
+	}
+
+}
+
+class Modifier_UltraNightmare : BDPModifier
+{
+	Default
+	{
+		BDPModifier.Icon "STFXDTH4";
+		BDPModifier.DisplayName "Ultra Nightmare";
+		BDPModifier.Description "Death is permanent. Good luck!";
+	}
+	override void WorldTick()
+	{
+		for(int i = 0; i < MAXPLAYERS; i++)
+		{
+			if(!PlayerInGame[i]) continue;
+			PlayerInfo plr = players[i];
+			if(!plr) continue;
+			
+			let dplr = Brutal_PlayerBase(plr.mo);
+			if(!dplr) continue;
+			
+			dplr.ultranightmare = true;
+		}
+	}
+
+}

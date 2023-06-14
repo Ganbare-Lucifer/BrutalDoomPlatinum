@@ -507,6 +507,17 @@ class BDP_HUD : DoomStatusBar
 			name pwr = CPlayer.mo.FindInventory("NoFatality") ? 'HASBERK2' : 'HASBERK';
 			DrawImage(pwr, iconPos + smallIconOfs, DI_SCREEN_LEFT_BOTTOM|DI_ITEM_LEFT_TOP);
 		}
+		If (CPlayer.mo.countinv("extralife") > 0)
+		{
+			DrawString(
+				mconFont, 
+				String.Format("%d", CPlayer.mo.countinv("extralife")), 
+				iconPos + (13, -5),
+				iconflags|DI_TEXT_ALIGN_RIGHT,
+				translation: Font.CR_White,
+				scale:(0.8, 0.8)
+			);
+		}
 		
 		// Armor:
 		iconPos.x += iconSpacing;
@@ -622,7 +633,7 @@ class BDP_HUD : DoomStatusBar
 		Vector2 pos = basepos;
 		int flags = DI_SCREEN_RIGHT_BOTTOM|DI_ITEM_CENTER_BOTTOM;
 		//Machine gun grenade
-		if(CPlayer.mo.FindInventory("FiredMGGrenade") && CPlayer.mo.player.readyweapon && Cplayer.mo.player.readyweapon is "machinegun")
+		if(CPlayer.mo.countinv("MachineGunAmmo") < 1 && CPlayer.mo.player.readyweapon && Cplayer.mo.player.readyweapon is "machinegun")
 		{
 			pos += (-92,1);
 			DrawImage("NoGren", pos, flags);

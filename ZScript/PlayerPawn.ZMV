@@ -148,6 +148,11 @@ class Brutal_PlayerBase : PlayerPawn
 	bool spawnberserked;
 	bool shockfactor;
 	bool istactical;
+	bool oneupmanship;
+	bool ultranightmare;
+	int ultraseed;
+	bool alreadyblacklisted;
+	bool extralifegranted;
 	
 	Default
     {
@@ -200,6 +205,84 @@ class Brutal_PlayerBase : PlayerPawn
 	//{
 	
 //	}
+		If(ultranightmare && !ultraseed)
+		{
+		
+			string data = bdp_seed_blacklist;
+			Array<string> blacklist;
+			data.Split(blacklist,",");
+			
+			int ultraseedcandidate = random(1,99999999999);
+			bool candidatetaken;
+			for(int i=0; i<blacklist.Size(); i++)
+			{	
+				int blacklistint = (blacklist[i].ToInt(10));
+				//console.printf("%i",blacklistint);
+				If(blacklistint == ultraseedcandidate)
+				{
+					candidatetaken = true;
+				}
+			
+			}
+			If(!candidatetaken)
+			{
+				ultraseed = ultraseedcandidate;
+				//console.printf("%i",ultraseed);
+			}
+				
+			
+		}
+		
+		if(ultraseed)
+		{
+			
+			If((health < 1) && !alreadyblacklisted)
+			{
+				A_Print("\cgThe nightmare has ended.",999);
+				
+				string ultraseedstring = (string.format("%i", ultraseed));
+				//Console.printf(ultraseedstring);
+				let sv_blacklist = CVar.GetCVar("bdp_seed_blacklist", players[consoleplayer]);
+
+				if(bdp_seed_blacklist == "") 
+				sv_blacklist.SetString(ultraseedstring);
+				else
+				sv_blacklist.SetString(String.Format("%s, %s", bdp_seed_blacklist, ultraseedstring));
+				//console.printf("%s, %s", bdp_seed_blacklist, ultraseedstring);
+				Alreadyblacklisted = true;
+			}
+			
+			
+			If((health >= 1))
+			{
+				string data = bdp_seed_blacklist;
+				Array<string> blacklist;
+				data.Split(blacklist,",");
+				for(int i=0; i<blacklist.Size(); i++)
+				{	
+					int blacklistint = (blacklist[i].ToInt(10));
+					//console.printf("%i",blacklistint);
+					If(blacklistint == ultraseed)
+					{
+						//candidatetaken = true;
+						damagemobj(self,self,9999999,"explosiveimpact");
+						A_Print("\cgThe nightmare has ended.",999);
+						//S_ChangeMusic("ORB");
+						Alreadyblacklisted = true;
+						//console.printf("FAGGOT");
+					}
+			
+				}
+			}
+			
+		}	
+		
+		if(ultranightmare && oneupmanship && !extralifegranted)
+		{
+			A_giveinventory("extralife",3);
+			Extralifegranted = true;
+		}
+		
 		If(spawnwitharmor && !findinventory("powershield",TRUE) && health > 0)
 		{
 			GiveInventory("PowerShield2",1);
@@ -220,9 +303,27 @@ class Brutal_PlayerBase : PlayerPawn
 		}
 		
 		
+		
+		
 		If(shockfactor && level.time % 5 == 0)
 		{
 			A_alertmonsters(0,AMF_TARGETEMITTER);
+		}
+		
+		If(countinv("extralife") > 0)
+		{
+			bbuddha = true;
+			If((health) <= 1)
+			{
+				a_sethealth(100);
+				A_takeinventory("extralife",1);
+				A_giveinventory("miniinvul",1);
+				A_startsound("items/soulsphere",212);
+			}
+		}
+		Else
+		{
+			bbuddha = false;
 		}
 		
 		//giveinventory("meathook",1);
