@@ -81,6 +81,23 @@ Model tripmineparticle // Name of actor in DECORATE
    FrameIndex L2NR A 0 0 // The sprite lump, sprite frame, model index, frame number
 }
 
+Model tenderizertendril // Name of actor in DECORATE
+{ 
+   Path "Models/Projectiles" // Path to model in PK3
+   SKIN 0 "tracer4.tga" // Model index, model file
+   MODEL 0 "Tracer2.md3" // Model index, texture (can be in any format supported by GZDoom)
+   Scale 0.3 0.3 1.0 // Scale values
+  // offset 0 0 3
+   useactorpitch
+   //ROTATING
+  // rotation-speed 5.0
+  // PITCHFROMMOMENTUM // A flag that will fix the model pitch for projectiles
+   //rolloffset 90
+   pitchoffset 90
+   FrameIndex L2NR A 0 0 // The sprite lump, sprite frame, model index, frame number
+}
+
+
 
 Model bfgtendril // Name of actor in DECORATE
 { 
@@ -210,7 +227,26 @@ Model bfgtendril2 // Name of actor in DECORATE
    FrameIndex L2NR D 0 0 // The sprite lump, sprite frame, model index, frame number
 }
 
-
+Model "BEAMZ_LaserBeam"
+{
+	Path "models/"
+	Model 0 "beam.md3"
+	Skin 0 "beam.png"
+	USEACTORPITCH
+	DONTCULLBACKFACES
+	
+	FrameIndex MODL A 0 0
+}
+Model "TenderizerLaser"
+{
+	Path "Models/Projectiles"
+	Model 0 "beam.md3"
+	Skin 0 "tracer4.tga"
+	USEACTORPITCH
+	DONTCULLBACKFACES
+	
+	FrameIndex MODL A 0 0
+}
 
 //Model Rocket2 // Name of actor in DECORATE
 //{ 
@@ -708,7 +744,40 @@ Model BurningPentagram   // Name of actor in DECORATE
    FrameIndex PNTG A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 
+Model BurningPentagramHammer   // Name of actor in DECORATE
+{
+   Path "models/bloodspot"    // Path to model in PK3
+   Model 0 "bloodspot.md3"    // Model index, model file
+   Skin 0 "PNTGA0.png"     // Model index, texture (can be in any format supported by GZDoom)
+   Scale 100.0 100.0 1.0            // Scale values
+   ZOffset 0.8
+   AngleOffset 90
+   FrameIndex PNTG A 0 0         // The sprite lump, sprite frame, model index, frame number
+  
+}
+
+Model NightmareBurningPentagram   // Name of actor in DECORATE
+{
+   Path "models/bloodspot"    // Path to model in PK3
+   Model 0 "bloodspot.md3"    // Model index, model file
+   Skin 0 "PNTGA0.png"     // Model index, texture (can be in any format supported by GZDoom)
+   Scale 100.0 100.0 1.0            // Scale values
+   ZOffset 0.8
+   FrameIndex PNTG A 0 0         // The sprite lump, sprite frame, model index, frame number
+}
+
 Model PentagramOff   // Name of actor in DECORATE
+{
+   Path "models/bloodspot"    // Path to model in PK3
+   Model 0 "bloodspot.md3"    // Model index, model file
+   Skin 0 "PNTGB0.png"     // Model index, texture (can be in any format supported by GZDoom)
+   Scale 100.0 100.0 1.0            // Scale values
+   ZOffset 0.7
+   FrameIndex PNTG B 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex PNTG C 0 0
+}
+
+Model NightmarePentagramOff   // Name of actor in DECORATE
 {
    Path "models/bloodspot"    // Path to model in PK3
    Model 0 "bloodspot.md3"    // Model index, model file

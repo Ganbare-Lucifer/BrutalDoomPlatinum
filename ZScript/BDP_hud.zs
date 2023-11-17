@@ -91,6 +91,16 @@ class BDP_HUD : DoomStatusBar
 		{
 			stambarFadeTime = Clamp(stambarFadeTime - 1, 0, STAMFADEWAIT);
 		}
+		
+		int teleport = CPlayer.mo.CountInv("TeleporterTimer");
+		if (teleport > 0)
+		{
+			TeleFadeTime = Clamp(TeleFadeTime + 1, 0, TELEFADEWAIT);
+		}
+		else
+		{
+			TeleFadeTime = Clamp(TeleFadeTime - 1, 0, TELEFADEWAIT);
+		}
 	}
 	
 	// This is more or less directly converted from SBARINFO,
@@ -504,8 +514,8 @@ class BDP_HUD : DoomStatusBar
 		);
 		if (CPlayer.mo.FindInventory("PowerStrength", true))
 		{
-			name pwr = CPlayer.mo.FindInventory("NoFatality") ? 'HASBERK2' : 'HASBERK';
-			DrawImage(pwr, iconPos + smallIconOfs, DI_SCREEN_LEFT_BOTTOM|DI_ITEM_LEFT_TOP);
+			//name pwr = CPlayer.mo.FindInventory("NoFatality") ? 'HASBERK2' : 'HASBERK';
+			DrawImage('HASBERK', iconPos + smallIconOfs, DI_SCREEN_LEFT_BOTTOM|DI_ITEM_LEFT_TOP);
 		}
 		If (CPlayer.mo.countinv("extralife") > 0)
 		{
@@ -585,6 +595,32 @@ class BDP_HUD : DoomStatusBar
 		DrawString(mConfont, "Stamina", pos + (0,-5), flags|DI_TEXT_ALIGN_LEFT, alpha: LinearMap(alpha, 0, 255, 0., 1.), scale: (0.5, 0.5));
 	}
 	
+	int teleFadeTime; //modified in Tick()
+	const TELEFADEWAIT = 10;
+	const TELEFADEHALF = TELEFADEWAIT / 2;
+	
+	void DrawTeleBar(vector2 pos, int flags = 0)
+	{		
+		let TeleportItem = CPlayer.mo.FindInventory("TeleporterTimer");
+		if (!TeleportItem)
+			return;
+		
+		int amt = TeleportItem.amount;
+		if (amt <= 0 && TeleFadeTime < TELEFADEHALF)
+		{
+			return;
+		}
+			
+		int maxAmt = TeleportItem.MaxAmount;
+		int realAmt = maxAmt - amt;
+		
+		int alpha = LinearMap(TeleFadeTime, TELEFADEHALF, TELEFADEWAIT, 0, 255);
+		alpha = Clamp(alpha, 0, 255);
+		
+		Fill(Color(alpha, 255, 0, 0), pos.x, pos.y, -Amt, 2, flags);
+		DrawString(mConfont, "Teleporter", pos + (0,-5), flags|DI_TEXT_ALIGN_RIGHT, alpha: LinearMap(alpha, 0, 255, 0., 1.), scale: (0.5, 0.5));
+	}
+	
 	void DrawRightcorner(vector2 basePos = (18, -19))
 	{
 		int iconflags = DI_SCREEN_RIGHT_BOTTOM|DI_ITEM_CENTER_BOTTOM;
@@ -593,6 +629,11 @@ class BDP_HUD : DoomStatusBar
 		vector2 iconPos = basePos;
 		int iconSpacing = -46;
 		vector2 numOfs = (-2, 1);
+		
+		if(CPlayer.mo.player.readyweapon && Cplayer.mo.player.readyweapon is "Tenderizer")
+		{
+			DrawTeleBar(iconPos + (-32, -29), iconflags);
+		}
 		
 		Ammo ammo1, ammo2;
 		int ammo1amt, ammo2amt;
@@ -626,6 +667,8 @@ class BDP_HUD : DoomStatusBar
 		iconPos += (iconSpacing * 1, 17);
 		DrawGrenadeIndicator(mIndexfnt, iconPos, iconFlags, (22,22));
 		DrawWeaponSpecificStuff(basepos);
+		
+		
 	}
 	
 	void DrawWeaponSpecificStuff(vector2 basepos = (18, -19))
@@ -643,6 +686,7 @@ class BDP_HUD : DoomStatusBar
 			pos += (-44,-16);
 			DrawImage("Needlsel", pos, flags);
 		}
+		
 	}
 	
 	string TicsToSeconds(int tics)
@@ -719,7 +763,7 @@ class BDP_HUD : DoomStatusBar
 				
 				// Continue drawing only if we have the icon
 				// (don't draw times for dummy powerups):
-				if (iconName)
+				if (iconName && !(item is "PowerBloodOnVisor") && !(item is "PowerBlueBloodOnVisor") && !(item is "PowerGreenBloodOnVisor"))
 				{
 					double alph = item.IsBlinking() ? 0.3 : 1.0;
 					DrawImage(
@@ -737,8 +781,23 @@ class BDP_HUD : DoomStatusBar
 						translation: col,
 						scale: (0.8, 0.8)
 					);
+					//DEBUG
+					/*
+					numpos.x = (numpos.x + 25);
+					DrawString(
+						mConfont, 
+						item.getclassname(), 
+						numpos, 
+						flags|DI_TEXT_ALIGN_LEFT,
+						translation: col,
+						scale: (0.8, 0.8)
+					);
+					numpos.x = (numpos.x - 25);
+					*/
+					
 					iconPos.y += ySpacing;
 					numpos.y += ySpacing;
+					
 				}
 			}
 		}

@@ -76,6 +76,8 @@ server int bd_beta_decorations = 1;
 
 server bool Dox_SimplePickups = false;
 
+server int bd_testmapsky = 0;
+
 //WEAPONS
 user int bd_Aim = 0;
 
@@ -99,6 +101,8 @@ server int bd_SSGreplacesShotgun = 0;
 server int bd_SSGreplacementMultiplier = 1;
 
 user int bd_SilencerWeaponSpecial = 0;
+
+user int bd_LegacyMinigunFire = 0;
 
 server int bd_LegStainingOptions = 0;
 //Very customizable weapon spawns.

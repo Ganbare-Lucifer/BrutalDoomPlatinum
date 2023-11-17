@@ -139,8 +139,7 @@ Class BDP_MapEnhancer : LevelPostProcessor
 				AddThing(25866,(2744, -3236, 999),180);
 				AddThing(25867,(-224, -3128, 999),270);
 				AddThing(25867,(-224, -3336, 999),90);
-				AddThing(15846,(-328, -3264, 999),180);
-				AddThing(15846,(-328, -3200, 999),180);
+				AddThing(25867,(-328, -3232, 999),180);
 				}
 				
 				If(CVar.GetCvar("BD_PSXMonsters").getint() == 1)
@@ -271,7 +270,7 @@ Class BDP_MapEnhancer : LevelPostProcessor
 			case '1dbf91738492fb0e29836a2d66406cf1':
 				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
 					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any),TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any));
-					Levellocals.ReplaceTextures("CEIL3_5", "LITGEN8",0);
+					//Levellocals.ReplaceTextures("CEIL3_5", "LITGEN8",0);
 					Levellocals.ReplaceTextures("BROWN96", "METAL24", TexMan.NOT_BOTTOM);
 					Levellocals.ReplaceTextures("BROWN96", "METAL24B", TexMan.NOT_MIDDLE);
 					Levellocals.ReplaceTextures("BROWN1", "METALIN4", TexMan.NOT_BOTTOM);
@@ -310,10 +309,10 @@ Class BDP_MapEnhancer : LevelPostProcessor
 					Levellocals.ReplaceTextures("FLOOR4_1", "METAL51",0);
 					Levellocals.ReplaceTextures("FLOOR4_5", "METAL51",0);
 					Levellocals.ReplaceTextures("CEIL3_5", "LITGEN6",0);
-					Levellocals.ReplaceTextures("MFLR8_1", "LITGEN8",0);
+					//Levellocals.ReplaceTextures("MFLR8_1", "LITGEN8",0);
 					Levellocals.ReplaceTextures("CEIL5_2", "METAL51",0);
-					Levellocals.ReplaceTextures("FLOOR6_2", "LITGEN8", TexMan.not_floor);
-					Levellocals.ReplaceTextures("FLOOR7_2", "LITGEN8", TexMan.not_floor);
+				//	Levellocals.ReplaceTextures("FLOOR6_2", "LITGEN8", TexMan.not_floor);
+				//	Levellocals.ReplaceTextures("FLOOR7_2", "LITGEN8", TexMan.not_floor);
 					Levellocals.ReplaceTextures("BROWN1", "METAL24",0);
 					Levellocals.ReplaceTextures("BROWN96", "METAL22",0);
 					Levellocals.ReplaceTextures("LITE2", "METAL24B",0);
@@ -346,6 +345,2683 @@ Class BDP_MapEnhancer : LevelPostProcessor
 					AddThing(71, (-672, 672, -999), 0);
 					AddThing(71, (-928, 800, -999), 270);
 				}
+				Break;
+				
+			//e1m5
+			case '66d8e54b173041f981a11cce766c4215':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any),TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any));
+					
+					//Levellocals.ReplaceTextures("CEIL3_5", "LITGEN8",0);
+					Levellocals.ReplaceTextures("STARTAN3", "STARGR1",0);
+					Levellocals.ReplaceTextures("STONE", "W_LAB4",0);
+					Levellocals.ReplaceTextures("FLOOR7_1", "FLOOR4_8",0);
+					Levellocals.ReplaceTextures("FLOOR4_1", "METAL51",0);
+					Levellocals.ReplaceTextures("FLOOR4_5", "METAL51",0);
+					Levellocals.ReplaceTextures("CEIL3_1", "METAIND2",0);
+					Levellocals.ReplaceTextures("CEIL3_2", "METAIND2",0);
+					Levellocals.ReplaceTextures("STONE3", "INDUS4",0);
+					//Levellocals.ReplaceTextures("FLAT5_4", "LITGEN8",0);
+					//Levellocals.ReplaceTextures("MFLR8_1", "LITGEN8",0);
+					Levellocals.ReplaceTextures("BROWN1", "METAL24",0);
+					Levellocals.ReplaceTextures("BROWN96", "METAL22",0);
+					Levellocals.ReplaceTextures("LITE2", "METAL24B",0);
+					Levellocals.ReplaceTextures("STONE2", "BUNKER05",0);
+					//Levellocals.ReplaceTextures("CEIL5_2", "LITGEN8",0);
+					Levellocals.ReplaceTextures("STEP6", "LIT05S",0);
+					Levellocals.ReplaceTextures("STEP5", "LIT05S",0);
+					levellocals.ReplaceTextures("BROWN144", "CLIFF05B",0);
+					Level.Sectors[4].settexture(Sector.floor,TexMan.CheckForTexture("MFLR8_2",TexMan.Type_Any));
+					Level.Sectors[0].settexture(Sector.floor,TexMan.CheckForTexture("MFLR8_2",TexMan.Type_Any));
+					Level.Sectors[1].settexture(Sector.floor,TexMan.CheckForTexture("FLOOR4_8",TexMan.Type_Any));
+					Level.Sectors[2].settexture(Sector.floor,TexMan.CheckForTexture("FLOOR4_8",TexMan.Type_Any));
+					Level.Sectors[3].settexture(Sector.floor,TexMan.CheckForTexture("FLOOR4_8",TexMan.Type_Any));
+					
+					SetThingEdNum(26,25855);
+					SetThingEdNum(27,25855);
+					
+					AddThing(25867, (72, 608, 999), 0);
+					AddThing(25867, (72, 1056, 999), 0);
+					AddThing(25895, (648, 800, 999), 0);
+					AddThing(25943, (400, 420, 999), 180,MODES_ALL | MTF_AMBUSH);
+					AddThing(25943, (724, 168, 999), 180);
+					AddThing(25943, (1024, 1056, 999), 180);
+					AddThing(25943, (1088, 1216, 999), 180);
+					AddThing(25931, (-1440, 560, 999), 0);
+					AddThing(25932, (-1360, 560, 999), 0);
+					AddThing(25932, (-1440, 1104, 999), 0);
+					AddThing(25933, (-1360, 1104, 999), 0);
+					AddThing(25855, (800, 1088, 999), 80);
+					AddThing(25855, (800, 1216, 999), 80);
+					
+				}
+				
+				If(CVar.GetCvar("BD_PSXMonsters").getint() == 1)
+				{
+					SetThingEdNum(161,25942);
+					SetThingEdNum(267,25942);
+					SetThingEdNum(269,25942);
+					SetThingEdNum(65,25942);
+					
+					SetThingEdNum(30,65);
+					SetThingEdNum(31,65);
+					SetThingEdNum(78,65);
+				}
+				Break;
+			
+			//e1m6
+			case '5faa25f5a6aab3409cae0af87f910341':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any),TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any));
+					levellocals.ReplaceTextures("FLAT5_5", "METAL54",0);
+					levellocals.ReplaceTextures("FLOOR4_1", "METAL51",0);
+					levellocals.ReplaceTextures("FLOOR4_5", "METAL51",0);
+				//	levellocals.ReplaceTextures("MFLR8_1", "LITGEN8",0);
+					levellocals.ReplaceTextures("CEIL5_2", "METAL51",0);
+				//	levellocals.ReplaceTextures("FLOOR6_2", "LITGEN8", TexMan.not_floor);
+				//	levellocals.ReplaceTextures("FLOOR7_2", "LITGEN8", TexMan.not_floor);
+					levellocals.ReplaceTextures("BROWN1", "METAL24",0);
+					levellocals.ReplaceTextures("BROWN96", "METAL22",0);
+					levellocals.ReplaceTextures("LITE2", "METAL24B",0);
+					levellocals.ReplaceTextures("STARTAN3", "STARGR1",0);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05",0);
+					levellocals.ReplaceTextures("BROWNHUG", "CLIFF05B",0);
+					levellocals.ReplaceTextures("FLOOR7_1", "MFLR8_2",0);
+					
+				}
+				If(CVar.GetCvar("BD_PSXMonsters").getint() == 1)
+				{
+					SetThingEdNum(40,25942);
+					SetThingEdNum(41,25942);
+					SetThingEdNum(42,25942);
+					SetThingEdNum(43,25942);
+					SetThingEdNum(185,25942);
+					SetThingEdNum(243,25942);
+					AddThing(25942, (2496, -960, 999), 180);
+					
+					AddThing(65, (-272, -768, 999), 0);
+					AddThing(65, (512, 1424, 999), 270);
+					AddThing(65, (648, 1392, 999), 270);
+					AddThing(65, (3200, -1664, 999), 45);
+					SetThingEdNum(47,65);
+				}
+				Break;
+				
+			//e1m7
+			case '9007f68e7f351a5758198933336f6b9f':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any),TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any));
+					levellocals.ReplaceTextures("FLAT5_4", "metal56", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures("CEIL5_1", "metal51", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures("FLOOR7_1", "MFLR8_2", 0);
+					levellocals.ReplaceTextures("FLOOR5_1", "METAL51", 0);
+					levellocals.ReplaceTextures("STARTAN3", "STARGR1", 0);
+					levellocals.ReplaceTextures("BROWN1", "METAL24", 0);
+					levellocals.ReplaceTextures("BROWN96", "METAL22", 0);
+					levellocals.ReplaceTextures("LITE2", "METAL24B", 0);
+					//Level.Sectors[3].settexture(Sector.floor,TexMan.CheckForTexture("FLAT9",TexMan.Type_Any));
+					levellocals.ReplaceTextures("STONE2", "BUNKER05", 0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S", 0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S", 0);
+					levellocals.ReplaceTextures("BROWN144", "CLIFF05B",0);
+					setwalltexture(920,line.front,side.mid,"CEMENT1");
+					setwalltexture(918,line.front,side.mid,"CEMENT1");
+					setwalltexture(921,line.front,side.mid,"CEMENT1");
+					//setwalltexture(916,line.front,side.top,"BROWN96");
+					
+					AddThing(25855, (96, -352, 999), 0);
+					AddThing(25855, (288, -352, 999), 0);
+					AddThing(25855, (496, -352, 999), 0);
+					AddThing(25855, (-496, -880, 999), 0);
+					
+					SetThingEdNum(151,25855);
+					SetThingEdNum(150,25855);
+					
+					AddThing(25866, (1028, -792, 999), 90);
+					AddThing(25866, (1168, -1784, 999), 90);
+					AddThing(25866, (1312, -2000, 999), 0);
+					AddThing(25866, (1504, -2232, 999), 90);
+					AddThing(25866, (1504, -2376, 999), 90);
+					AddThing(25866, (1824, -2232, 999), 90);
+					AddThing(25866, (1824, -2376, 999), 90);
+					AddThing(25866, (-352, -904, 999), 90);
+					AddThing(25866, (-932, -8, 999), 90);
+					
+					
+					
+					AddThing(25867, (904, -914, 999), 0);
+					AddThing(25867, (904, -1098, 999), 0);
+					AddThing(25867, (-704, -236, 999), 0);
+					AddThing(25867, (-704, -428, 999), 0);
+					AddThing(25867, (-1384, 384, 999), 0);
+					
+					AddThing(25944, (-520, -384, 999), 0);
+					
+					AddThing(25946, (-8, -1208, 999), 0);
+					AddThing(25946, (-888, -2516, 999), 0);
+					
+					AddThing(25946, (-124, -2476, 999), -45);
+					
+					
+				}
+				If(CVar.GetCvar("BD_PSXMonsters").getint() == 1)
+				{
+					SetThingEdNum(205,25942);
+					SetThingEdNum(319,25942);
+					
+					AddThing(66, (-384, -2072, 999), 0);
+					SetThingEdNum(306,66);
+				}
+				Break;
+				
+			//e1m8
+			case '058fb092ea1b70da1e3cbf501c4a91a1':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any),TexMan.CheckForTexture("SKYPHO",TexMan.Type_Any));
+					Level.Sectors[31].settexture(Sector.ceiling,TexMan.CheckForTexture("BDBLOOD1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BROWNHUG", "CLIFF05B",0);
+					//levellocals.ReplaceTextures("BROWN1", "CLIFF05B",0);
+					
+					AddThing(25856, (416, 864, 999), 180);
+					
+					AddThing(25860, (-512, 4608, 999), 180);
+					AddThing(25860, (1536, 4608, 999), 180);
+					AddThing(25860, (-1024, 2560, 999), 180);
+					AddThing(25860, (2048, 2560, 999), 180);
+					
+					AddThing(2035, (256, 3584, 999), 180);
+					AddThing(2035, (768, 3328, 999), 180);
+					AddThing(2035, (256, 3200, 999), 180);
+					AddThing(2035, (512, 3712, 999), 180);
+					AddThing(2035, (640, 2432, 999), 180);
+					AddThing(2035, (-128, 2304, 999), 180);
+					AddThing(2035, (0, 2688, 999), 180);
+					
+					SetThingEdNum(94,2046);
+					SetThingEdNum(70,2003);
+					
+					SetThingEdNum(58,25947);
+					SetThingEdNum(59,25948);
+				}
+				
+				If(CVar.GetCvar("BD_PSXMonsters").getint() == 1)
+				{
+					
+					
+					AddThing(25942, (48, 688, 999), 45);
+					AddThing(25942, (784, 688, 999), 135);
+					
+					SetThingEdNum(77,25942);
+					SetThingEdNum(86,25942);
+					SetThingEdNum(80,25942);
+					SetThingEdNum(83,25942);
+					SetThingEdNum(82,25942);
+					SetThingEdNum(81,25942);
+					SetThingEdNum(78,25942);
+					SetThingEdNum(84,25942);
+					SetThingEdNum(79,25942);
+					SetThingEdNum(85,25942);
+					
+				}
+				Break;
+
+			//e2m2
+			case 'a24fe135d5b6fd427fe27bef89717a65':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any),TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any));
+					levellocals.ReplaceTextures("WOOD1", "STARBR2", 0);
+					levellocals.ReplaceTextures("WOOD3", "BROWN1", 0);
+					levellocals.ReplaceTextures("WOOD5", "BROWN1", 0);
+					levellocals.ReplaceTextures("WOOD4", "BROWN1", 0);
+					levellocals.ReplaceTextures("SW2SATYR", "METAL", 0);
+					levellocals.ReplaceTextures("SW1SATYR", "METAL", 0);
+					levellocals.ReplaceTextures("SW1LION", "METAL", 0);
+					levellocals.ReplaceTextures("SW2LION", "METAL", 0);
+					levellocals.ReplaceTextures("WOODGARG", "STARBR2", 0);
+					levellocals.ReplaceTextures("SW1WOOD", "DOORHI", 0);
+					levellocals.ReplaceTextures("MARBLE1", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE2", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE3", "BUNKER07", 0);
+					levellocals.ReplaceTextures("GSTONE1", "SLADWALL", 0);
+					levellocals.ReplaceTextures("CEIL5_1", "LITGEN8", 0);
+					levellocals.ReplaceTextures("SKINSYMB", "PIPE2", 0);
+					levellocals.ReplaceTextures("DEM1_5", "METAL56", 0);
+					levellocals.ReplaceTextures("FLOOR5_4", "METAL52", 0);
+					levellocals.ReplaceTextures("FLAT5_5", "METAL52", 0);
+					levellocals.ReplaceTextures("FLAT5_1", "METAIND3", 0);
+					levellocals.ReplaceTextures("CEIL1_1", "METAL51", 0);
+					levellocals.ReplaceTextures("FLAT10", "METAL51", 0);
+					levellocals.ReplaceTextures("CEIL3_2", "METAL51", 0);
+					levellocals.ReplaceTextures("CEIL3_1", "METAL51", 0);
+					levellocals.ReplaceTextures("FLAT1_2", "METAL54", 0);
+					levellocals.ReplaceTextures("BROWN1", "METAL24", 0);
+					levellocals.ReplaceTextures("BROWN96", "METAL22", 0);
+					levellocals.ReplaceTextures("LITE2", "METAL24B", 0);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05", 0);
+					levellocals.ReplaceTextures("CEIL4_3", "LITGEN6", 0);
+					//levellocals.ReplaceTextures("CEIL3_5", "CEMENTW9", 0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S", 0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S", 0);
+
+					AddThing(25856, (1376, 2016, 0), 180);
+					AddThing(25855, (1248, 1680, 0), 180);
+					AddThing(25855, (1504, 1680, 0), 180);
+					AddThing(25908, (-112, -272, 0), 180);
+					AddThing(25908, (-112, -304, 0), 180);
+					AddThing(25908, (-112, -336, 0), 180);
+				}
+				Break;
+
+			//e2m3
+			case '918436b3c2d0ad4f2c108183414b4612':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any),TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any));
+					levellocals.ReplaceTextures("WOOD1", "STARBR2", 0);
+					levellocals.ReplaceTextures("WOOD3", "BROWN1", 0);
+					levellocals.ReplaceTextures("WOOD5", "BROWN1", 0);
+					levellocals.ReplaceTextures("WOOD4", "BROWN1", 0);
+					levellocals.ReplaceTextures("WOODGARG", "STARBR2", 0);
+					levellocals.ReplaceTextures("SW1WOOD", "DOORHI", 0);
+					levellocals.ReplaceTextures("MARBLE1", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE2", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE3", "BUNKER07", 0);
+					levellocals.ReplaceTextures("GSTONE1", "SLADWALL", 0);
+					levellocals.ReplaceTextures("SKINSYMB", "PIPE2", 0);
+					levellocals.ReplaceTextures("FLOOR5_4", "METAL52", 0);
+					levellocals.ReplaceTextures("FLAT5_5", "METAL52", 0);
+					levellocals.ReplaceTextures("FLAT5_1", "METAIND3", 0);
+					levellocals.ReplaceTextures("CEIL1_1", "METAL51", 0);
+					levellocals.ReplaceTextures("FLAT10", "METAL51", 0);
+					levellocals.ReplaceTextures("CEIL3_2", "METAL51", 0);
+					levellocals.ReplaceTextures("CEIL3_1", "METAL51", 0);
+					levellocals.ReplaceTextures("FLOOR7_1", "METAL51", 0);
+					levellocals.ReplaceTextures("MIDVINE2", "GRATX", 0);
+					levellocals.ReplaceTextures("MIDBRN1", "GRATX", 0);
+					levellocals.ReplaceTextures("BROVINE", "METALI2D", 0);
+					levellocals.ReplaceTextures("FLAT8", "METAL54", 0);
+					levellocals.ReplaceTextures("FLAT1_1", "METAL52", 0);
+					levellocals.ReplaceTextures("SKSPINE1", "STARGR1", 0);
+					levellocals.ReplaceTextures("DEM1_5", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL3_4", "LITGEN9", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("FLAT1_2", "METAL54", 0);
+					levellocals.ReplaceTextures("BROWN1", "METAL24", 0);
+					levellocals.ReplaceTextures("BROWN96", "METAL22", 0);
+					levellocals.ReplaceTextures("LITE2", "METAL24B", 0);
+					levellocals.ReplaceTextures("BROVINE2", "METALIN4", 0);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05", 0);
+					//levellocals.ReplaceTextures("CEIL3_5", "CEMENTW9", 0);
+					levellocals.ReplaceTextures("FLOOR1_1", "LITGEN6", 0);
+					//levellocals.ReplaceTextures("FLOOR1_6", "LITGEN6", 0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S", 0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S", 0);
+
+					SetThingEdNum(199,25870);
+					SetThingEdNum(200,25870);
+					SetThingEdNum(201,25870);
+					SetThingEdNum(202,25870);
+					AddThing(25949, (896, -384, -999), 90);
+					AddThing(25949, (1152, 1376, -999), 180);
+					AddThing(25950, (320, -384, -999), 90);
+					AddThing(25950, (320, -384, -999), 90);
+					AddThing(25950, (320, 64, -999), 90);
+					AddThing(25950, (-704, 416, -999), 90);
+					AddThing(15855, (-224, 352, -999), 90);
+					AddThing(15855, (-224, 544, -999), 90);
+					AddThing(15855, (-416, 544, -999), 90);
+					AddThing(15855, (608, 288, -999), 90);
+					AddThing(15855, (672, 352, -999), 90);
+				}
+				Break;
+
+			//e2m4
+			case '1bc04d646b32d3a3e411daf3c1a38ff8':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any),TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any));
+					levellocals.ReplaceTextures("CEIL3_5", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("FLOOR5_1", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("FLOOR5_4", "LITGEN9", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL4_3", "LITGEN6", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("MARBLE1", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE2", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE3", "BUNKER07", 0);
+					levellocals.ReplaceTextures("GRAYVINE", "W_LAB4", 0);
+					levellocals.ReplaceTextures("GRAYVINE", "W_LAB4", 0);
+					levellocals.ReplaceTextures("FLAT5_8", "FLOOR0_5", 0);
+					levellocals.ReplaceTextures("FLAT1_2", "METAL54", 0);
+					levellocals.ReplaceTextures("BROVINE", "METALI2D", 0);
+					levellocals.ReplaceTextures("FLAT8", "METAL54", 0);
+					levellocals.ReplaceTextures("FLAT1_1", "METAL52", 0);
+					levellocals.ReplaceTextures("SKSPINE1", "STARGR1", 0);
+					levellocals.ReplaceTextures("DEM1_5", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL3_4", "LITGEN9", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("FLAT1_2", "METAL54", 0);
+					levellocals.ReplaceTextures("NUKAGE3", "BLOOD1", 0);
+					levellocals.ReplaceTextures("NUKAGE1", "BLOOD1", 0);
+					levellocals.ReplaceTextures("FLAT5_4", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("MFLR8_1", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("BROWN1", "METAL24", 0);
+					levellocals.ReplaceTextures("BROWN96", "METAL22", 0);
+					levellocals.ReplaceTextures("LITE2", "METAL24B", 0);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05", 0);
+					//levellocals.ReplaceTextures("CEIL3_5", "CEMENTW9", 0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S", 0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S", 0);
+
+					SetThingEdNum(232,25855);
+					SetThingEdNum(233,25855);
+					SetThingEdNum(234,25855);
+					SetThingEdNum(235,25855);
+					AddThing(25855, (-512, -2528, -999), 80);
+					AddThing(25855, (-256, -2528, -999), 80);
+					AddThing(25855, (-256, -2784, -999), 80);
+					AddThing(25855, (-512, -2784, -999), 80);
+					AddThing(25855, (-832, -2592, -999), 80);
+					AddThing(25855, (-832, -2720, -999), 80);
+					AddThing(25855, (2560, -1760, -9999), 80);
+					AddThing(25855, (2336, -2336, -9999), 80);
+					AddThing(25855, (2336, -2208, -9999), 80);
+					AddThing(25855, (2336, -2112, -9999), 80);
+					AddThing(25855, (2784, -2336, -9999), 80);
+					AddThing(25855, (2784, -2208, -9999), 80);
+					AddThing(25855, (2784, -2112, -9999), 80);
+					AddThing(25933, (2368, -1280, -999), 80);
+					AddThing(25932, (2752, -1280, -999), 80);
+					AddThing(25934, (2336, -288, 128), 80);
+					AddThing(25936, (2784, -288, 0), 80);
+					AddThing(25934, (1408, -1984, 0), 80);
+					AddThing(25934, (1536, -1664, 0), 80);
+					AddThing(25936, (1536, -1984, 0), 80);
+					AddThing(25934, (1408, -1664, 0), 80);
+					AddThing(25936, (-448, -1728, 0), 80);
+					AddThing(25934, (-448, -1856, 0), 80);
+					AddThing(25934, (-192, -1664, 0), 80);
+					AddThing(25935, (-192, -1536, 0), 80);
+					AddThing(25934, (-960, -1536, 0), 80);
+					AddThing(25935, (-960, -1664, 0), 80);
+					AddThing(25934, (-960, -1856, 0), 80);
+					AddThing(25935, (-960, -1984, 0), 80);
+					AddThing(25934, (-320, -96, -40), 80);
+					AddThing(25935, (-256, -96, -20), 80);
+					AddThing(25934, (-320, -288, -40), 80);
+					AddThing(25934, (-256, -288, -40), 80);
+					AddThing(25943, (2432, -1792, 0), 180);
+					AddThing(25943, (2624, -1856, 0), 180);
+					AddThing(25943, (2592, -1248, 0), 180);
+					AddThing(25943, (768, -544, 0), 180);
+					AddThing(25943, (448, -640, 0), 180);
+					AddThing(25943, (288, -192, 0), 180);
+					AddThing(25943, (832, 64, 0), 180);
+				}
+				Break;
+
+			//e2m5
+			case '99c580ad8fabe923cab485cb7f3c5e5d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYDE2",TexMan.Type_Any),TexMan.CheckForTexture("SKYDE2",TexMan.Type_Any));
+					//levellocals.ReplaceTextures("STARTAN3", "W_LAB3", 0);
+					//levellocals.ReplaceTextures("STARG1", "W_LAB4", 0);
+					//levellocals.ReplaceTextures("STONE", "W_LAB4", 0);
+					//levellocals.ReplaceTextures("STARTAN1", "W_LAB4B", 0);
+					//levellocals.ReplaceTextures("STARG3", "W_LAB4B", 0);
+					levellocals.ReplaceTextures("BIGDOOR6", "BIGDOOR1", 0);
+					levellocals.ReplaceTextures("FLAT5_1", "FLOOR5_1", 0);
+					levellocals.ReplaceTextures("FLAT1_1", "FLAT3", 0);
+					levellocals.ReplaceTextures("CEIL1_1", "FLAT3", 0);
+					levellocals.ReplaceTextures("CEIL1_3", "CEIL1_2", 0);
+					levellocals.ReplaceTextures("MFLR8_2", "FLOOR4_8", 0);
+					levellocals.ReplaceTextures("FLAT5_2", "FLOOR4_8", 0);
+					levellocals.ReplaceTextures("FLOOR7_1", "FLOOR5_1", 0);
+					levellocals.ReplaceTextures("DEM1_5", "F_LAB5", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures("DEM1_6", "F_LAB5", 0);
+					levellocals.ReplaceTextures("DEM1_5", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("WOOD1", "STARBR2", 0);
+					levellocals.ReplaceTextures("WOOD3", "PIPE2", 0);
+					levellocals.ReplaceTextures("STONE2", "BUNKER03", 0);
+					levellocals.ReplaceTextures("STONE3", "BUNKER03", 0);
+					levellocals.ReplaceTextures("MARBFAC2", "BUNKER04", 0);
+					levellocals.ReplaceTextures("WOOD5", "BROWN1", 0);
+					levellocals.ReplaceTextures("WOOD4", "PIPE2", 0);
+					levellocals.ReplaceTextures("SW2SATYR", "METAL", 0);
+					levellocals.ReplaceTextures("SW1LION", "METAL", 0);
+					levellocals.ReplaceTextures("WOODGARG", "STARBR2", 0);
+					levellocals.ReplaceTextures("SW1WOOD", "DOORHI", 0);
+					levellocals.ReplaceTextures("FLAT5_5", "FLOOR5_3", 0);
+					levellocals.ReplaceTextures("GSTVINE2", "BUNKER03", 0);
+					levellocals.ReplaceTextures("CEIL3_1", "CEIL3_4", 0);
+					levellocals.ReplaceTextures("MIDVINE2", "BDHAU4", 0);
+					levellocals.ReplaceTextures("BROVINE2", "BDHAU1", 0);
+					levellocals.ReplaceTextures("BROVINE", "BDHAU2", 0);
+					levellocals.ReplaceTextures("SP_HOT1", "BDHAU2", 0);
+					levellocals.ReplaceTextures("NUKAGE3", "BLOOD1", 0);
+					levellocals.ReplaceTextures("CEIL4_1", "F_SKY1", 0);
+					levellocals.ReplaceTextures("FWATER4", "MFLR8_2", 0);
+					levellocals.ReplaceTextures("CEIL3_5", "LITGEN8", 0);
+					levellocals.ReplaceTextures("FLAT5_7", "FLAT5_4", 0);
+					levellocals.ReplaceTextures("FLOOR4_1", "METAL51", 0);
+					levellocals.ReplaceTextures("FLOOR4_5", "METAL51", 0);
+					levellocals.ReplaceTextures("MARBLE1", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE2", "BUNKER07", 0);
+					levellocals.ReplaceTextures("MARBLE3", "BUNKER07", 0);
+					levellocals.ReplaceTextures("SKINSYMB", "BUNKER07", 0);
+					levellocals.ReplaceTextures("CEIL3_2", "METAL51", 0);
+					levellocals.ReplaceTextures("CEIL3_1", "METAL51", 0);
+					levellocals.ReplaceTextures("BROWN1", "METAL24", 0);
+					levellocals.ReplaceTextures("BROWN96", "METAL22", 0);
+					levellocals.ReplaceTextures("LITE2", "METAL24B", 0);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05", 0);
+					//levellocals.ReplaceTextures("CEIL3_5", "CEMENTW9", 0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S", 0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S", 0);
+
+					LevelLocals.ReplaceTextures ("BDNUKE1", "BDBLOOD1",0);
+
+					AddThing(25855, (-3184, -112, -999), 80);
+					AddThing(25855, (-2960, -112, -999), 80);
+					AddThing(25855, (-3216, 16, -999), 80);
+					AddThing(25855, (-2928, 16, -999), 80);
+					AddThing(25855, (-3120, -368, -999), 80);
+					AddThing(25855, (-2344, -272, -999), 80);
+					AddThing(25855, (-2512, -1008, -999), 80);
+					AddThing(25855, (-2736, -1008, -999), 80);
+					AddThing(25889, (-3072, 160, -999), 80);
+					AddThing(25889, (-3552, 80, -999), 80);
+					AddThing(25889, (-2592, 80, -999), 80);
+					AddThing(25889, (-2592, 80, -999), 80);
+					AddThing(25888, (-3504, 0, -999), 130);
+					AddThing(25888, (-3504, 160, -999), 210);
+					AddThing(25888, (-3040, 192, -999), 225);
+					AddThing(25888, (-3136, 160, -999), 0);
+					AddThing(25888, (-2640, 160, -999), 315);
+					AddThing(25888, (-2640, 0, -999), 45);
+					AddThing(25937, (-2624, -288, -999), 45);
+					AddThing(26012, (0,0,0),0);
+				}
+				Break;
+
+			//e2m6
+			case '3838ab29292587a7ee3ca71e7040868d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any),TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any));
+					levellocals.ReplaceTextures("FLAT18", "FLOOR6_1", 0);
+					levellocals.ReplaceTextures("ICKWALL1", "BDHAU1", 0);
+					levellocals.ReplaceTextures("ICKWALL6", "BDHAU1", 0);
+					levellocals.ReplaceTextures("ICKWALL7", "BDHAU1", 0);
+					levellocals.ReplaceTextures("ICKWALL2", "BDHAU6", 0);
+					levellocals.ReplaceTextures("ICKWALL2", "BDHAU6", 0);
+					levellocals.ReplaceTextures("ICKWALL5", "BDHAU6", 0);
+					levellocals.ReplaceTextures("ICKWALL4", "BDHAU6", 0);
+					levellocals.ReplaceTextures("ICKDOOR1", "BDHAU5", 0);
+					levellocals.ReplaceTextures("FLOOR0_3", "BDHAU7", 0);
+					levellocals.ReplaceTextures("FLOOR5_4", "BDHAU7", 0);
+					levellocals.ReplaceTextures("BROVINE", "BDHAU2", 0);
+					levellocals.ReplaceTextures("FLOOR4_1", "METAL51", 0);
+					levellocals.ReplaceTextures("FLOOR4_5", "METAL51", 0);
+					levellocals.ReplaceTextures("BROWN1", "METAL24", 0);
+					levellocals.ReplaceTextures("BROWN96", "METAL22", 0);
+					levellocals.ReplaceTextures("LITE2", "METAL24B", 0);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05", 0);
+					//levellocals.ReplaceTextures("CEIL3_5", "CEMENTW9", 0);
+					levellocals.ReplaceTextures("FLAT5_2", "METAL54", 0);
+					levellocals.ReplaceTextures("FLOOR7_1", "METAL54", 0);
+					levellocals.ReplaceTextures("WOOD3", "METAL22", 0);
+					levellocals.ReplaceTextures("WOOD4", "METAL21", 0);
+					levellocals.ReplaceTextures("LITE96", "METAL24B", 0);
+					levellocals.ReplaceTextures("SW2SATYR", "METAL24C", 0);
+					levellocals.ReplaceTextures("SW2LION", "METAL24C", 0);
+					levellocals.ReplaceTextures("WOODGARG", "METAL24C", 0);
+					levellocals.ReplaceTextures("WOODSKUL", "METAL24C", 0);
+					levellocals.ReplaceTextures("FLAT1_1", "METAL51", 0);
+					levellocals.ReplaceTextures("CEIL1_1", "METAL21", 0);
+					levellocals.ReplaceTextures("CEIL3_5", "LIT05C", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("FLOOR4_8", "LIT05C", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("STEP6", "LIT05S", 0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S", 0);
+				}
+				Break;
+
+			//e2m7
+			case '8590f489879870c098cd7029c3187159':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any),TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BROWN1", "BUNKER07", 0);
+					levellocals.ReplaceTextures("F_SKY1", "LITGEN8", 0);
+					levellocals.ReplaceTextures("CEIL3_3", "LITGEN8", 0);
+					levellocals.ReplaceTextures("CEIL5_2", "LIT05C", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL3_6", "LITGEN8", 0);
+					levellocals.ReplaceTextures("CEIL3_5", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("FLAT23", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL3_2", "LITGEN9B", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("BROWN96", "METALI2D", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "METALI2D", 0);
+					levellocals.ReplaceTextures("BIGDOOR6", "BIGDOOR3", 0);
+					levellocals.ReplaceTextures("MARBFAC3", "STONE", 0);
+				}
+				Break;
+
+			//e2m8
+			case 'effe91df41ad41f6973c06f0ad67ddb9':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any),TexMan.CheckForTexture("SKYDEI",TexMan.Type_Any));
+
+					SetThingEdNum(19,2546);
+				}
+				Break;
+
+			//e3m1
+			case 'c4a89a481a32bfeddeb82e818f2bdec5':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					OffsetSectorPlane(30, Sector.ceiling, 64);
+					OffsetSectorPlane(31, Sector.ceiling, 64);
+
+					AddThing(25940, (192, -464, -999), 270);
+					AddThing(25941, (-256, -512, -999), 270);
+					AddThing(25941, (640, -512, -999), 270);
+					AddThing(34, (240, -64, -999), 270);
+					AddThing(34, (8, 176, -999), 270);
+					AddThing(34, (376, -176, -999), 270);
+					AddThing(34, (496, 40, -999), 270);
+					AddThing(34, (-144, 1064, -999), 270);
+					AddThing(25873, (-880, 1328, -999), 270);
+					AddThing(25873, (-720, 1328, -999), 270);
+					AddThing(25873, (64, -664, -999), 270);
+					AddThing(25873, (320, -664, -999), 270);
+					AddThing(25873, (-160, 64, -999), 270);
+					AddThing(25873, (-160, 192, -999), 270);
+					AddThing(25856, (-800, 1440, 0), 180);
+					AddThing(25951, (-376, -856, 0), 270);
+					AddThing(25951, (792, -1064, 0), 270);
+					//AddThing(25949, (-800, 2208, 0), 270);
+					AddThing(25950, (232, 616, 0), 270);
+					AddThing(3002, (-512, -752, 0), 270);
+					AddThing(3002, (1064, -792, 0), 270);
+					AddThing(2048, (216, -1672, 0), 270);
+				}
+				Break;
+
+			//e3m2
+			case 'bbdc4253ae277da5fce2f19561627496':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+				}
+				Break;
+
+			//e3m3
+			case 'f951882cb5a8def910f0ed966a1054c5':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					levellocals.ReplaceTextures("SLADWALL", "BDHEL03", 0);
+					levellocals.ReplaceTextures("NUKESLAD", "BDHEL03", 0);
+					levellocals.ReplaceTextures("SLADSKUL", "BDHEL02", 0);
+					levellocals.ReplaceTextures("SLADPOIS", "BDHEL01", 0);
+					levellocals.ReplaceTextures("CEIL3_5", "BDHEL04B", 0);
+					levellocals.ReplaceTextures("CEIL3_6", "BDHEL04B", 0);
+					levellocals.ReplaceTextures("FLOOR4_8", "BDHEL06", 0);
+					levellocals.ReplaceTextures("FLOOR5_1", "BDHEL06", 0);
+					levellocals.ReplaceTextures("FLOOR5_2", "FLAT1_1", 0);
+					levellocals.ReplaceTextures("FLAT5_2", "FLAT1_1", 0);
+					levellocals.ReplaceTextures("SHAWN2", "BDHEL04", 0);
+					levellocals.ReplaceTextures("FLAT23", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL1", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL3", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL2", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL6", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL5", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL7", "BDHEL04", 0);
+					levellocals.ReplaceTextures("BRNSMALL", "BDHEL07", 0);
+					levellocals.ReplaceTextures("BRNSMALC", "BDHEL07", 0);
+					levellocals.ReplaceTextures("BRNSMALR", "BDHEL07", 0);
+					levellocals.ReplaceTextures("MIDGRATE", "BDHEL07", 0);
+					levellocals.ReplaceTextures("SKULWALL", "BDHEL08", 0);
+					levellocals.ReplaceTextures("SKULWAL3", "BDHEL08", 0);
+					levellocals.ReplaceTextures("firewalL", "LFALL01", 0);
+					levellocals.ReplaceTextures("WOOD4", "BDHEL01", 0);
+					levellocals.ReplaceTextures("METAL1", "SKSPINE2", 0);
+					levellocals.ReplaceTextures("STARG2", "MARBLE3", 0);
+					levellocals.ReplaceTextures("STARG3", "MARBLE3", 0);
+					levellocals.ReplaceTextures("STARGR2", "MARBLE3", 0);
+					levellocals.ReplaceTextures("FWATER4", "SFLR6_4", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("FWATER4", "LAVA1", 0);
+					levellocals.ReplaceTextures("CEMENT3", "MARBLE2", 0);
+					levellocals.ReplaceTextures("CEMPOIS", "MARBLE2", 0);
+					levellocals.ReplaceTextures("STONE", "MARBLE2", 0);
+					levellocals.ReplaceTextures("CEMENT1", "MARBLE2", 0);
+					levellocals.ReplaceTextures("CEMENT2", "MARBLE2", 0);
+					levellocals.ReplaceTextures("CEMENT4", "MARBLE2", 0);
+					levellocals.ReplaceTextures("CEMENT5", "MARBLE2", 0);
+
+					AddThing(25856, (-160, 1136, 0), 180);
+					AddThing(25951, (-160, 1136, 0), 180);
+					AddThing(25951, (-352, -160, 0), 180);
+					AddThing(25951, (696, 280, 0), 180);
+					AddThing(25951, (576, -928, 0), 180);
+					AddThing(25873, (64, 1456, -999), 270);
+					AddThing(25873, (-384, 1456, -999), 270);
+					AddThing(25874, (-232, -840, -709), 270);
+					AddThing(25874, (-464, -840, -709), 270);
+					AddThing(25874, (-1032, -1016, -709), 270);
+					AddThing(25874, (944, 408, -709), 270);
+					AddThing(25874, (1840, -120, -709), 270);
+					AddThing(25874, (1808, 472, -709), 270);
+					AddThing(25874, (1080, 672, -709), 270);
+					AddThing(25874, (1336, 1336, -709), 270);
+					AddThing(25874, (1032, 1384, -709), 270);
+					AddThing(25874, (912, 1104, -709), 270);
+					AddThing(25874, (-200, 712, -709), 270);
+					AddThing(25874, (-904, 920, -709), 270);
+					AddThing(25874, (-928, 616, -709), 270);
+					AddThing(25874, (-1192, 800, -709), 270);
+					AddThing(25874, (-1272, 304, -709), 270);
+					AddThing(25874, (-1096, 384, -709), 270);
+					AddThing(25874, (-760, -824, -709), 270);
+					AddThing(25874, (88, -824, -709), 270);
+					AddThing(25874, (-528, 616, -709), 270);
+					AddThing(25874, (320, 256, -709), 270);
+					AddThing(25874, (-696, 1104, -709), 270);
+				}
+				Break;
+
+			//e3m4
+			case '2b65cb046ea40d2e44576949381769ca':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					levellocals.ReplaceTextures("GSTSATYR", "BDHEL10", 0);
+					levellocals.ReplaceTextures("GSTLION", "BDHEL11", 0);
+					levellocals.ReplaceTextures("GSTGARG", "BDHEL10", 0);
+					levellocals.ReplaceTextures("ickdoor1", "SW1WOOD", 0);
+					levellocals.ReplaceTextures("BIGDOOR2", "BIGDOOR7", 0);
+					levellocals.ReplaceTextures("BIGDOOR3", "BIGDOOR7", 0);
+					levellocals.ReplaceTextures("BIGDOOR4", "BIGDOOR7", 0);
+					levellocals.ReplaceTextures("pipe2", "SKINtek1", 0);
+					levellocals.ReplaceTextures("ICKWALL1", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL3", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL2", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL6", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL5", "BDHEL04", 0);
+					levellocals.ReplaceTextures("ICKWALL7", "BDHEL04", 0);
+					levellocals.ReplaceTextures("STARBR2", "SKINtek2", 0);
+					levellocals.ReplaceTextures("pipe1", "SKINtek2", TexMan.NOT_MIDDLE);
+
+					AddThing(25874, (-112, 1024, -709), 270);
+					AddThing(25874, (176, 1024, -709), 270);
+					AddThing(25874, (-40, 648, -709), 270);
+					AddThing(25874, (96, 648, -709), 270);
+					AddThing(25874, (980, 288, -709), 270);
+					AddThing(25874, (980, 544, -709), 270);
+					AddThing(25874, (312, -1204, -709), 270);
+					AddThing(25874, (312, -844, -709), 270);
+					AddThing(25874, (72, -844, -709), 270);
+					AddThing(25874, (-180, -1204, -709), 270);
+					AddThing(25874, (-180, -908, -709), 270);
+					AddThing(25874, (-100, -1248, -709), 270);
+					AddThing(25874, (508, -1432, -709), 270);
+					AddThing(34, (-884, -2016, -999), 270);
+					AddThing(34, (-524, -1740, -999), 270);
+					AddThing(34, (-800, -1744, -999), 270);
+					AddThing(34, (-1068, -1632, -999), 270);
+					AddThing(34, (-1068, -1120, -999), 270);
+					AddThing(34, (-736, -524, -999), 270);
+					AddThing(34, (-608, -2604, -999), 270);
+					AddThing(34, (300, -1536, -999), 270);
+					AddThing(34, (292, -1860, -999), 270);
+					AddThing(34, (292, -2100, -999), 270);
+					AddThing(34, (-528, -1376, -999), 270);
+					AddThing(34, (952, -1428, -999), 270);
+					AddThing(34, (1100, -1296, -999), 270);
+					AddThing(25856, (-1344, -1344, 0), 180);
+					AddThing(25856, (92, -2500, 0), 180);
+					AddThing(25950, (1240, 92, 0), 180);
+					AddThing(25950, (780, 16, 0), 180);
+					AddThing(25949, (60, -680, 0), 180);
+					AddThing(25949, (72, -2572, 0), 180);
+					AddThing(25949, (864, -1540, 0), 270);
+				}
+				Break;
+
+			//e3m5
+			case '100106c75157b7decb0dcad2a59c1919':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+
+					AddThing(2543, (-960, 320, 0), 270);
+					AddThing(2543, (736, 288, 0), 270);
+					AddThing(25951, (-192, 2336, 0), 270);
+					AddThing(25951, (-384, 1536, 0), 270);
+					AddThing(25949, (2016, 864, 0), 270);
+					AddThing(25949, (2016, 672, 0), 270);
+					AddThing(25949, (960, 320, 0), 270);
+				}
+				Break;
+
+			//e3m6
+			case '2baf49b4cc36155b60b5330660ac0976':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					levellocals.ReplaceTextures("FIREBLU1", "FLAT5_7", 0);
+					levellocals.ReplaceTextures("FIREBLU2", "FLAT5_7", 0);
+
+					AddThing(2543, (-224, -160, 0), 270);
+					AddThing(11008, (224, -1600, 0), 270);
+					AddThing(11008, (-96, -1600, 0), 270);
+					AddThing(11008, (-224, -640, 0), 270);
+					AddThing(11008, (544, -928, 0), 270);
+					AddThing(11008, (-96, 832, 0), 270);
+					AddThing(11008, (-864, 1120, 0), 270);
+					AddThing(11008, (288, 608, 0), 270);
+					AddThing(11008, (1856, 864, 0), 270);
+					AddThing(11008, (1856, -192, 0), 270);
+					AddThing(11008, (1312, -192, 0), 270);
+					AddThing(11008, (1664, -960, 0), 270);
+					AddThing(11008, (1088, -1568, 0), 270);
+					AddThing(11009, (1280, -1760, 0), 270);
+					AddThing(11009, (256, -1504, 0), 270);
+					AddThing(11009, (288, -2688, 0), 270);
+					AddThing(11009, (-1184, -1344, 0), 270);
+					AddThing(11009, (-1280, -960, 0), 270);
+					AddThing(11008, (-1120, -672, 0), 270);
+					AddThing(11009, (-64, -640, 0), 270);
+					AddThing(11009, (64, 352, 0), 270);
+					AddThing(2542, (1280, -544, 0), 270);
+					AddThing(2542, (224, 960, 0), 270);
+					AddThing(2542, (1408, 1184, 0), 270);
+				}
+				Break;
+
+			//e3m7
+			case '5ac51ca9f1b57d4538049422a5e37291':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					levellocals.ReplaceTextures("CEIL4_2", "F_SKY1", 0);
+					levellocals.ReplaceTextures("BLOOD3", "LAVA1", 0);
+
+					AddThing(25873, (1376, 1568, -999), 270);
+					AddThing(25873, (1504, 1568, -999), 270);
+					AddThing(2542, (96, -1056, 0), 270);
+					AddThing(2542, (1440, -960, 0), 270);
+					AddThing(2543, (1440, 1280, 0), 270);
+				}
+				Break;
+
+			//e3m8
+			case 'ef128313112110ed6c1549af96af26c9':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					SetThingEdNum(5,2547);
+
+					AddThing(2046, (1664, -704, 0), 270);
+					AddThing(2046, (1664, -832, 0), 270);
+					AddThing(2046, (1536, -704, 0), 270);
+					AddThing(2046, (1536, -832, 0), 270);
+				}
+				Break;
+
+			//e4m8
+			case '2dc939e508ab8eb68af79d5b60568711':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					SetThingEdNum(40,2548);
+				}
+				Break;
+
+			//e3m9
+			case 'fe97dcb9e6235fb3c52ae7c143160d73':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					OffsetSectorPlane(15, Sector.ceiling, 64);
+					OffsetSectorPlane(16, Sector.ceiling, 64);
+					OffsetSectorPlane(55, Sector.ceiling, 64);
+					OffsetSectorPlane(55, Sector.floor, 64);
+					OffsetSectorPlane(45, Sector.ceiling, 64);
+
+					AddThing(25940, (320, -464, -999), 270);
+					AddThing(25941, (-128, -512, -999), 270);
+					AddThing(25941, (768, -512, -999), 270);
+					AddThing(34, (368, -64, -999), 270);
+					AddThing(34, (136, 176, -999), 270);
+					AddThing(34, (504, -176, -999), 270);
+					AddThing(34, (624, 40, -999), 270);
+					AddThing(34, (16, 1064, -999), 270);
+					AddThing(25873, (-752, 1328, -999), 270);
+					AddThing(25873, (-592, 1328, -999), 270);
+					AddThing(25873, (192, -664, -999), 270);
+					AddThing(25873, (448, -664, -999), 270);
+					AddThing(25873, (-32, 64, -999), 270);
+					AddThing(25873, (-32, 192, -999), 270);
+					AddThing(25856, (-672, 1440, 0), 180);
+					AddThing(25951, (-248, -856, 0), 270);
+					AddThing(25951, (920, -1064, 0), 270);
+					AddThing(25949, (-672, 2208, 0), 270);
+					AddThing(25950, (360, 616, 0), 270);
+					AddThing(3002, (-384, -752, 0), 270);
+					AddThing(3002, (1192, -792, 0), 270);
+					AddThing(2048, (344, -1672, 0), 270);
+				}
+				Break;
+				
+			//SIGIL
+			
+			//e5m3
+			case '3417a4859c8fece797c9daa715d14d63':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any),TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any));
+					
+				}
+				
+				Break;
+			//e5m4
+			case 'aebf219bf02aaec549ba3ef8cb3f715b':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any),TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any));
+					
+				}
+				
+				Break;
+			//e5m5
+			case '4e5d482364f6f787cb8efc17bde5d64d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any),TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any));
+					
+				}
+				
+				Break;
+			//e5m6
+			case 'eb984250d4935e93c265ae8c8455560f':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any),TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any));
+					
+				}
+				
+				Break;
+			//e5m7
+			case '8c35efba700537035c84f5e1ad35c064':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any),TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any));
+					
+				}
+				
+				Break;
+			//e5m8
+			case '6ead80da1f30b4b3546fa294eef9f87c':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any),TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any));
+					
+				}
+				
+				Break;
+			//e5m9
+			case '2a6b4d277f526bfb3adb122609feead7':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) {
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any),TexMan.CheckForTexture("SIGCAV",TexMan.Type_Any));
+					
+				}
+				
+				Break;
+
+			//DOOM II
+			//map01
+			case '3c9902e376cca1e9c3be8763bdc21df5':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					levellocals.ReplaceTextures("CEMENT9", "TANROCK5",0);
+					levellocals.ReplaceTextures("CEIL1_2", "CEIL4_3",0);
+					levellocals.ReplaceTextures("CEIL1_3", "CEIL1_2",0);
+					levellocals.ReplaceTextures("BIGBRIK1", "INDUS3",0);
+					levellocals.ReplaceTextures("BIGBRIK2", "INDUS4",0);
+					levellocals.ReplaceTextures("SPACEW3", "SPACM0",0);
+					levellocals.ReplaceTextures("MIDGRATE", "GRATX",0);
+					levellocals.ReplaceTextures("PIPEWAL1", "WFALL1", TexMan.NOT_MIDDLE | TexMan.NOT_TOP);
+					levellocals.ReplaceTextures("", "BRONZE1", TexMan.NOT_MIDDLE | TexMan.NOT_TOP);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05",0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S",0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S",0);	
+					levellocals.ReplaceTextures("MARBFAC3", "BRWINDOW",0);
+					levellocals.ReplaceTextures("FLOOR7_1", "METAL56", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures("ceil5_2", "LITGEN9D", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL3_3", "LITGEN9C", TexMan.NOT_FLOOR);
+					
+					AddThing(15848, (-736, 576, -999), 0);
+					AddThing(15848, (-768, 416, -999), 0);
+					AddThing(15848, (-928, 704, -999), 0);
+					AddThing(15848, (-832, 960, -999), 0);
+					AddThing(15848, (-640, 1088, -999), 0);
+					AddThing(15848, (-864, 1184, -999), 0);
+					AddThing(15848, (-1152, 800, -999), 0);
+					AddThing(15848, (448, -96, -999), 0);
+					AddThing(15848, (480, 96, -999), 0);
+					AddThing(15848, (800, 96, -999), 0);
+					AddThing(15848, (352, 192, -999), 0);
+					AddThing(15848, (1024, 64, -999), 0);
+					AddThing(15848, (1664, 608, -999), 0);
+					AddThing(15848, (288, -64, -999), 0);
+					AddThing(15848, (1664, 64, -999), 0);
+					AddThing(15848, (1216, -704, -999), 0);
+					AddThing(15848, (160, -736, -999), 0);
+					AddThing(15850, (1184, -640, -999), 0);
+					AddThing(15850, (1660, 650, -999), 0);
+					AddThing(15850, (-896, 416, -999), 0);
+					AddThing(15850, (-992, 1056, -999), 0);
+					AddThing(15851, (-1120, 832, -999), 0);
+					AddThing(15851, (-1152, 608, -999), 0);
+					AddThing(15851, (-736, 960, -999), 0);
+					AddThing(15851, (224, -608, -999), 0);
+					AddThing(15851, (1536, -96, -999), 0);
+					AddThing(15849, (1376, -320, -999), 0);
+					AddThing(15849, (992, -192, -999), 0);
+					AddThing(15849, (1568, 96, -999), 0);
+					AddThing(15849, (-992, 768, -999), 0);
+					AddThing(15849, (-544, 992, -999), 0);
+					AddThing(11017, (416, 672, -999), 0);
+					AddThing(11017, (928, 736, -999), 0);
+					AddThing(11017, (928, 736, -999), 0);
+					AddThing(11033, (352, -640, -999), 0);
+					AddThing(11033, (928, -640, -999), 0);
+					AddThing(11033, (1504, -192, -999), 0);
+					AddThing(11033, (1600, 288, -999), 0);
+					//AddThing(15846, (864, 504, 999), 90);
+					AddThing(25867, (800, 504, -999), 90);
+					//AddThing(15846, (736, 504, 999), 90);
+				}
+				Break;
+
+			//map02
+			case 'ab24ae6e2cb13cbdd04600a4d37f9189':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					levellocals.ReplaceTextures("CEMENT9", "TANROCK5",0);
+					levellocals.ReplaceTextures("CEIL1_2", "CEIL4_3",0);
+					levellocals.ReplaceTextures("CEIL1_3", "CEIL1_2",0);
+					levellocals.ReplaceTextures("BIGBRIK1", "INDUS3",0);
+					levellocals.ReplaceTextures("BIGBRIK2", "INDUS4",0);
+					levellocals.ReplaceTextures("SPACEW3", "SPACM0",0);
+					levellocals.ReplaceTextures("MIDGRATE", "GRATX",0);
+					levellocals.ReplaceTextures("PIPEWAL1", "WFALL1", TexMan.NOT_MIDDLE | TexMan.NOT_TOP);
+					levellocals.ReplaceTextures("", "BRONZE1", TexMan.NOT_MIDDLE | TexMan.NOT_TOP);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05",0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S",0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S",0);	
+					levellocals.ReplaceTextures("MARBFAC3", "BRWINDOW",0);
+					levellocals.ReplaceTextures("FLOOR7_1", "METAL56", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures("ceil5_2", "LITGEN9D", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL3_3", "LITGEN9C", TexMan.NOT_FLOOR);
+
+					AddThing(25868, (544, 728, -999), 90);
+					AddThing(25868, (544, 920, -999), 90);
+					AddThing(25868, (544, 920, -999), 90);
+					AddThing(26000, (912, 1376, -999), 90);
+					AddThing(26000, (1072, 1376, -999), 90);
+					AddThing(26000, (1072, 1488, -999), 90);
+					AddThing(26000, (912, 1488, -999), 90);
+					AddThing(26001, (1160, 1232, -999), 90);
+					AddThing(26001, (744, 1240, -999), 90);
+					AddThing(26002, (1832, 1056, -999), 90);
+					AddThing(26002, (1648, 1056, -999), 90);
+					AddThing(26002, (1896, 1056, -999), 90);
+					AddThing(26002, (1992, 1120, -999), 90);
+					AddThing(15857, (1616, 1328, -999), 90);
+					AddThing(15857, (1152, 928, -999), 90);
+					AddThing(15857, (928, 992, -999), 90);
+					AddThing(15857, (432, 1280, -999), 90);
+					AddThing(15857, (1536, 368, -999), 90);
+					AddThing(15857, (1544, 808, -999), 90);
+					AddThing(15859, (1240, 216, -999), 90);
+					AddThing(15859, (1272, 408, -999), 90);
+					AddThing(25907, (1248, 488, -999), 90);
+					AddThing(26003, (1112, 144, -999), 90);
+					AddThing(15855, (1256, 1696, -999), 90);
+					AddThing(15855, (1248, 1656, -999), 90);
+					AddThing(15855, (1584, 152, -999), 90);
+					AddThing(26003, (1368, 640, -999), 90);
+					AddThing(26003, (1440, 488, -999), 90);
+					AddThing(26003, (1424, 312, -999), 90);
+				}
+				Break;
+
+			//map03
+			case '5e8679670469f92e15cf4219b5b98fef':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					levellocals.ReplaceTextures ("MFLR8_2", "METAL12",0);
+					levellocals.ReplaceTextures ("FLOOR7_1", "METAL51",0);
+					levellocals.ReplaceTextures ("BROWN144", "METALI2D",0);
+					levellocals.ReplaceTextures ("METAL2", "METAL22",0);
+					
+					AddThing(25920, (2240, 3584, -999), 90);
+					AddThing(25920, (2464, 3584, -999), 45);
+					AddThing(15855, (2428, 3304, -999), 90);
+					AddThing(15855, (1992, 3616, -999), 90);
+					AddThing(15855, (2068, 3612, -999), 90);
+					AddThing(15855, (1992, 3676, -999), 90);
+					AddThing(15859, (2324, 3420, -999), 90);
+					AddThing(15859, (2048, 3696, -999), 90);
+					AddThing(15859, (2612, 3708, -999), 90);
+					AddThing(15859, (2596, 3152, -999), 90);
+					AddThing(15859, (2952, 3376, -999), 90);
+					AddThing(15859, (3884, 3360, -999), 90);
+					AddThing(15857, (4752, 3856, -999), 90);
+					AddThing(15857, (4720, 2832, -999), 90);
+				}
+				Break;
+
+			//map04
+			case 'cec791136a83eec4b91d39718bdf9d82':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					levellocals.ReplaceTextures("CEMENT9", "TANROCK5",0);
+					levellocals.ReplaceTextures("CEIL1_2", "CEIL4_3",0);
+					levellocals.ReplaceTextures("CEIL1_3", "CEIL1_2",0);
+					levellocals.ReplaceTextures("BIGBRIK1", "INDUS3",0);
+					levellocals.ReplaceTextures("BIGBRIK2", "INDUS4",0);
+					levellocals.ReplaceTextures("SPACEW3", "SPACM0",0);
+					levellocals.ReplaceTextures("MIDGRATE", "GRATX",0);
+					levellocals.ReplaceTextures("PIPEWAL1", "WFALL1", TexMan.NOT_MIDDLE | TexMan.NOT_TOP);
+					levellocals.ReplaceTextures("", "BRONZE1", TexMan.NOT_MIDDLE | TexMan.NOT_TOP);
+					levellocals.ReplaceTextures("STONE2", "BUNKER05",0);
+					levellocals.ReplaceTextures("STEP6", "LIT05S",0);
+					levellocals.ReplaceTextures("STEP5", "LIT05S",0);	
+					levellocals.ReplaceTextures("MARBFAC3", "BRWINDOW",0);
+					levellocals.ReplaceTextures("FLOOR7_1", "METAL56", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures("ceil5_2", "LITGEN9D", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("CEIL3_3", "LITGEN9C", TexMan.NOT_FLOOR);
+					
+					AddThing(15857, (-704, 1344, -999), 90);
+					AddThing(15857, (-672, 1152, -999), 90);
+					AddThing(26000, (-1008, 608, -999), 90);
+					AddThing(26000, (-1008, 480, -999), 90);
+				}
+				Break;
+
+			//map05
+			case '9e061ad7fbcd7fad968c976cb4aa3b9d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					levellocals.ReplaceTextures ("BIGBRIK1", "INDUS3",0);
+					levellocals.ReplaceTextures ("BIGBRIK2", "INDUS4",0);
+					levellocals.ReplaceTextures ("CEIL5_2", "MFLR8_2", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures ("TEKBRON1", "NEWDOR2", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures ("WOODMET1", "NEWDOR3", TexMan.NOT_CEILING);
+					levellocals.ReplaceTextures("STEP6", "LIT05S",0);
+					levellocals.ReplaceTextures("STEP5", "STEP1",0);
+					levellocals.ReplaceTextures ("STONE4", "BUNKER05",0);
+					levellocals.ReplaceTextures ("STONE5", "BUNKER05",0);
+					levellocals.ReplaceTextures ("MIDGRATE", "GRATX",0);
+					
+					AddThing(15857, (1328, -168, -999), 90);
+					AddThing(15857, (1720, -328, -999), 90);
+					AddThing(15859, (1328, 224, -999), 90);
+					AddThing(15859, (1328, 320, -999), 90);
+					AddThing(15859, (1328, 448, -999), 90);
+					AddThing(15859, (1792, -632, -999), 90);
+					AddThing(15859, (2688, -296, -999), 90);
+					AddThing(15859, (848, 440, -999), 90);
+					AddThing(15859, (2304, -640, -999), 90);
+					AddThing(15859, (1792, -640, -999), 90);
+					AddThing(15859, (2688, -640, -999), 90);
+					AddThing(15859, (1768, 432, -999), 90);
+					AddThing(15859, (2304, 432, -999), 90);
+					AddThing(15859, (2600, 248, -999), 90);
+					AddThing(15878, (2176, 192, -999), 0);
+					AddThing(15878, (2288, -192, -999), 0);
+					AddThing(15855, (1896, -136, -999), 90);
+					AddThing(25920, (2256, -104, -999), 90);
+					AddThing(25920, (2432, -256, -999), 40);
+					AddThing(25920, (2256, -104, -999), 0);
+				}
+				Break;
+
+			//map06
+			case '434575dcb650b4efc912efc0782c7acc':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					Level.Sectors[149].settexture(Sector.ceiling,TexMan.CheckForTexture("F_SKY1",TexMan.Type_Any));
+					levellocals.ReplaceTextures ("FLAT5_4", "MFLR8_2", TexMan.NOT_CEILING);
+					OffsetSectorPlane(70, Sector.ceiling, 32);
+				}
+				Break;
+
+			//map07
+			case '291f24417fb3dd411339ae82ef9b3597':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					Level.Sectors[1].settexture(Sector.ceiling,TexMan.CheckForTexture("SLIME15",TexMan.Type_Any));
+					Level.Sectors[1].settexture(Sector.floor,TexMan.CheckForTexture("SLIME15",TexMan.Type_Any));
+					OffsetSectorPlane(1, Sector.ceiling, -8);
+					OffsetSectorPlane(1, Sector.floor, 8);
+					OffsetSectorPlane(21, Sector.floor, -16);
+					OffsetSectorPlane(22, Sector.floor, -16);
+					OffsetSectorPlane(26, Sector.floor, -16);
+					OffsetSectorPlane(27, Sector.floor, -16);
+					levellocals.ReplaceTextures("RROCK19", "JUNKY15",0);
+					levellocals.ReplaceTextures ("", "BRONZE1", TexMan.NOT_MIDDLE | TexMan.NOT_BOTTOM);
+					
+					AddThing(15848, (-576, -608, -999), 0);
+					AddThing(15848, (-928, -224, -999), 0);
+					AddThing(15848, (-256, -160, -999), 0);
+					AddThing(15848, (320, 224, -999), 0);
+					AddThing(15848, (320, -992, -999), 0);
+					AddThing(15848, (-1248, -1120, -999), 0);
+					AddThing(15848, (-1632, -736, -999), 0);
+					AddThing(11009, (-960, -736, -999), 0);
+					AddThing(11008, (-320, 256, -999), 0);
+					AddThing(25896, (-720, -160, -999), 0);
+					AddThing(25896, (-608, -272, -999), 90);
+					AddThing(25896, (-608, -48, -999), 90);
+					AddThing(25896, (-496, -160, -999), 0);
+				}
+				Break;
+
+			//map09
+			case '82256f04136adb2413bfc604b5f6adf3':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					levellocals.ReplaceTextures ("FLOOR4_1", "FLAT10",0);
+					levellocals.ReplaceTextures ("FLOOR4_1", "FLAT10",0);
+					levellocals.ReplaceTextures ("SLIME04", "NUKAGE1",0);
+					levellocals.ReplaceTextures ("BIGBRIK1", "INDUS3",0);
+					levellocals.ReplaceTextures ("BIGBRIK2", "INDUS4",0);
+					levellocals.ReplaceTextures ("MODWALL1", "TANROCK5",0);
+					levellocals.ReplaceTextures ("TANROCK4", "TANROCK5",0);
+					levellocals.ReplaceTextures ("BIGBRIK1", "INDUS3",0);
+					levellocals.ReplaceTextures ("BIGBRIK2", "INDUS4",0);
+					
+					AddThing(15859, (712, 2728, -999), 0);
+					AddThing(15859, (328, 2632, -999), 0);
+					AddThing(15859, (800, 3008, -999), 0);
+					AddThing(15859, (480, 3296, -999), 0);
+					AddThing(15859, (-128, 3232, -999), 0);
+					AddThing(15859, (-216, 3016, -999), 0);
+					AddThing(25921, (-160, 1632, -999), 0);
+					AddThing(25921, (232, 1888, -999), 0);
+					AddThing(15859, (-512, 1992, -999), 0);
+					AddThing(15859, (-688, 2168, -999), 0);
+					AddThing(15859, (-944, 1744, -999), 0);
+					AddThing(15859, (-984, 2528, -999), 0);
+					AddThing(25920, (64, 1472, -999), 90);
+					AddThing(25920, (1304, 1016, -999), 40);
+					AddThing(25920, (1384, 1072, -999), 0);
+					AddThing(25920, (408, 1560, -999), 0);
+					AddThing(11033, (920, 2544, -999), 0);
+					AddThing(11033, (920, 2360, -999), 0);
+					AddThing(11033, (1184, 992, -999), 0);
+					AddThing(11033, (1992, 1448, -999), 0);
+					AddThing(11033, (2056, 2312, -999), 0);
+					AddThing(26005, (320, -32, -999), 0);
+				}
+				Break;
+
+			//map10
+			case '6c620f43705bec0abbabbf46ac3e62d2':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR5",TexMan.Type_Any));
+					levellocals.ReplaceTextures ("CEIL3_3", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures ("FLOOR4_6", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures ("FLOOR4_6", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures ("CRATOP2", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures ("FLAT9", "LITGEN8", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures ("FLAT8", "LITGEN8", TexMan.NOT_FLOOR);
+					//levellocals.ReplaceTextures ("FLAT1", "LITGEN9d", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures ("GRAY1", "METALI2D",0);
+					levellocals.ReplaceTextures ("tanrock7", "METALI2D",0);
+					levellocals.ReplaceTextures ("STONE6", "METALI2D",0);
+					levellocals.ReplaceTextures ("STONE7", "METALI2D",0);
+					levellocals.ReplaceTextures ("STONE4", "BUNKER05",0);
+					levellocals.ReplaceTextures ("STONE5", "BUNKER05",0);
+					levellocals.ReplaceTextures ("MFLR8_2", "METAL12",0);
+					levellocals.ReplaceTextures ("MFLR8_2", "METAL52",0);
+					levellocals.ReplaceTextures ("FLAT1_2", "METAL54",0);
+					
+					AddThing(15859, (712, 2728, -999), 0);
+					AddThing(13845, (1408, -160, -999), 270);
+					AddThing(26005, (-704, -800, -999), 0);
+					AddThing(26005, (-448, -992, -999), 0);
+					AddThing(25920, (-512, 1664, -999), 0);
+					AddThing(25920, (1728, -736, -999), 0);
+					AddThing(25920, (896, -1408, -999), 0);
+					AddThing(25920, (0, -1216, -999), 90);
+					AddThing(25920, (192, -864, -999), 0);
+					AddThing(15855, (160, -1024, -999), 0);
+					AddThing(15855, (608, -992, -999), 0);
+					AddThing(15855, (736, -672, -999), 0);
+					AddThing(15855, (-1280, -320, -999), 0);
+					AddThing(15855, (-480, 2144, -999), 0);
+					AddThing(15855, (-1248, 2208, -999), 0);
+					AddThing(15855, (-96, 2208, -999), 0);
+					AddThing(15855, (128, 2208, -999), 0);
+					AddThing(15855, (-96, 1504, -999), 0);
+					AddThing(2035, (-832, 992, -999), 0);
+					AddThing(2035, (-736, 1024, -999), 0);
+					AddThing(2035, (-448, 1024, -999), 0);
+					AddThing(2035, (-352, 992, -999), 0);
+					AddThing(2035, (-992, 32, -999), 0);
+					AddThing(2035, (-1280, 448, -999), 0);
+					AddThing(2035, (-1664, 768, -999), 0);
+					AddThing(2035, (-1408, 128, -999), 0);
+					AddThing(2035, (-1472, 160, -999), 0);
+					AddThing(2035, (352, -1312, -999), 0);
+					AddThing(11033, (-608, 1024, -999), 0);
+					AddThing(25863, (192, -1120, -999), 0);
+					AddThing(25863, (512, -800, -999), 0);
+					AddThing(25863, (896, -1152, -999), 0);
+					AddThing(25863, (768, -1728, -999), 0);
+					AddThing(25863, (1280, -1216, -999), 0);
+					AddThing(25863, (0, 1664, -999), 0);
+					AddThing(25863, (192, 1312, -999), 0);
+					AddThing(25863, (0, 2080, -999), 0);
+					AddThing(25863, (-1376, -992, -999), 0);
+					AddThing(25863, (-1632, -992, -999), 0);
+				}
+				Break;
+
+			//map12
+			case '1af4dec2627360a55b3eb397bc15c39d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCIT1",TexMan.Type_Any),TexMan.CheckForTexture("SKYCIT2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("RROCK03", "JUNKY16",0);
+					levellocals.ReplaceTextures ("BIGBRIK1", "INDUS3",0);
+					levellocals.ReplaceTextures ("BIGBRIK2", "INDUS4",0);
+					levellocals.ReplaceTextures ("BIGDOOR5", "NEWDOR4B",0);
+					levellocals.ReplaceTextures("FLAT5_1", "METAIND3",0);
+					levellocals.ReplaceTextures("ZIMMER3", "METAIND5",0);
+					levellocals.ReplaceTextures("WOOD4", "DOOR1",0);
+					levellocals.ReplaceTextures("WOODGARG", "DOOR1",0);
+					levellocals.ReplaceTextures("WOOD1", "DOORSTOP",0);
+					
+					AddThing(11001, (1344, 2096, -999), 0);
+					AddThing(15848, (1568, 2096, -999), 0);
+					AddThing(15848, (1920, 1952, -999), 0);
+					AddThing(15848, (1648, 2352, -999), 0);
+					AddThing(15848, (784, 2224, -999), 0);
+					AddThing(15848, (-384, 2944, -999), 0);
+					AddThing(15848, (32, -992, -999), 0);
+					AddThing(11033, (928, 2016, -999), 0);
+					AddThing(11033, (960, 1376, -999), 0);
+					AddThing(11033, (544, 2720, -999), 0);
+					AddThing(11033, (-384, 2736, -999), 0);
+					AddThing(11033, (-1328, 2736, -999), 0);
+					AddThing(11033, (-1328, 1312, -999), 0);
+					AddThing(11033, (-1328, 256, -999), 0);
+					AddThing(11033, (-1328, -816, -999), 0);
+					AddThing(11033, (-32, -816, -999), 0);
+					AddThing(11033, (1904, -816, -999), 0);
+					AddThing(11033, (1904, 432, -999), 0);
+					AddThing(25920, (-448, 400, -999), 0);
+					AddThing(25920, (-592, 128, -999), 90);
+					AddThing(15855, (-768, 416, -999), 0);
+					AddThing(70, (1264, 2576, -999), 0);
+					AddThing(70, (1936, 480, -999), 0);
+					AddThing(70, (-1264, -880, -999), 0);
+					AddThing(7265, (1088, 1504, -999), 90);
+					AddThing(11008, (384, -1408, -999), 0);
+					AddThing(11008, (1440, 2736, -999), 0);
+					AddThing(11009, (1248, 2352, -999), 0);
+					AddThing(11009, (2048, -1120, -999), 0);
+					AddThing(11008, (-80, -944, -999), 0);
+					AddThing(11009, (-768, 2896, -999), 0);
+					AddThing(11008, (80, 2992, -999), 0);
+					AddThing(11008, (-1488, 112, -999), 0);
+					AddThing(11004, (1888, 608, -999), 270);
+					AddThing(11006, (1728, 2160, -999), 45);
+					AddThing(11005, (1040, 2112, -999), 220);
+					AddThing(11007, (-1056, 3040, -999), 180);
+					AddThing(11010, (1760, 1840, -999), 80);
+					AddThing(25891, (-672, 256, -999), 270);
+					AddThing(25891, (-400, 256, -999), 270);
+					AddThing(25891, (-64, 32, -999), 270);
+					AddThing(25891, (48, -192, -999), 270);
+					AddThing(25891, (-928, -384, -999), 270);
+					AddThing(25891, (-256, -384, -999), 270);
+					AddThing(25891, (544, -384, -999), 270);
+					AddThing(25891, (1104, -256, -999), 270);
+					AddThing(25891, (896, 224, -999), 270);
+					AddThing(25891, (848, 576, -999), 270);
+					AddThing(25891, (560, 352, -999), 270);
+					AddThing(25891, (-48, 480, -999), 270);
+					AddThing(25891, (304, 960, -999), 270);
+					AddThing(25891, (608, 752, -999), 270);
+					AddThing(25891, (1296, 48, -999), 270);
+					AddThing(15857, (1504, 1392, -999), 270);
+					AddThing(15857, (1504, 1120, -999), 270);
+					AddThing(15857, (1504, 800, -999), 270);
+					AddThing(15857, (1504, 576, -999), 270);
+					AddThing(25921, (-32, 672, -999), 270);
+					AddThing(25921, (-32, 864, -999), 270);
+					AddThing(25922, (-624, 1856, -999), 270);
+					AddThing(25922, (-256, 1856, -999), 270);
+					AddThing(25922, (-560, 2240, -999), 270);
+					AddThing(25922, (-240, 2240, -999), 270);
+				}
+				Break;
+
+			//map13
+			case 'fba6547b9fd44e95671a923a066e516f':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCIT1",TexMan.Type_Any),TexMan.CheckForTexture("SKYCIT2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("MFLR8_3", "APOCTX1",0);
+					levellocals.ReplaceTextures("LAVA4", "SLIME15",0);
+					levellocals.ReplaceTextures("MARBFAC4", "GRAY5",0);
+					
+					AddThing(7261, (-1056, -448, -999), 0);
+					AddThing(26006, (940, -2764, -999), 0);
+					AddThing(26007, (980, -2744, -999), 0);
+					AddThing(26006, (950, -2724, -999), 0);
+					AddThing(11001, (928, -2464, -999), 0);
+					AddThing(11001, (448, -3072, -999), 0);
+					AddThing(11001, (-320, -2720, -999), 0);
+					AddThing(11001, (-960, -2688, -999), 0);
+					AddThing(11001, (1056, -1952, -999), 0);
+					AddThing(11001, (224, -1792, -999), 0);
+					AddThing(11001, (-576, -1920, -999), 0);
+					AddThing(11001, (960, -256, -999), 0);
+					AddThing(11001, (1280, -1920, -999), 0);
+					AddThing(11001, (1664, -2688, -999), 0);
+					AddThing(11001, (-736, -160, -999), 0);
+					AddThing(11001, (512, -1376, -999), 0);
+					AddThing(11001, (640, -608, -999), 0);
+					AddThing(11001, (320, -416, -999), 0);
+					AddThing(11001, (-32, -1184, -999), 0);
+					AddThing(11001, (-576, -864, -999), 0);
+					AddThing(11001, (-768, -1184, -999), 0);
+					AddThing(11001, (192, 64, -999), 0);
+					AddThing(11001, (928, -1376, -999), 0);
+					AddThing(11001, (1248, -544, -999), 0);
+					AddThing(11001, (1728, -640, -999), 0);
+					AddThing(11001, (1760, -1440, -999), 0);
+					AddThing(15848, (512, -960, -999), 0);
+					AddThing(15848, (544, -704, -999), 0);
+					AddThing(15848, (532, -1216, -999), 0);
+					AddThing(11011, (704, -1504, -999), 0);
+					AddThing(11011, (320, -1472, -999), 0);
+					AddThing(11011, (704, -800, -999), 0);
+					AddThing(11011, (256, -864, -999), 0);
+					AddThing(11011, (-704, -1248, -999), 0);
+					AddThing(11003, (992, -2784, -999), 0);
+					AddThing(11003, (-480, -2016, -999), 0);
+					AddThing(11003, (96, -480, -999), 0);
+					AddThing(11003, (864, -32, -999), 0);
+					AddThing(11002, (736, -1408, -999), 0);
+					AddThing(70, (1120, -3424, -999), 0);
+					AddThing(70, (672, -3424, -999), 0);
+					AddThing(70, (96, -2848, -999), 0);
+					AddThing(70, (-1024, -1088, -999), 0);
+					AddThing(70, (1024, -1024, -999), 0);
+					AddThing(70, (1760, 352, -999), 0);
+					AddThing(11008, (384, -1408, -999), 0);
+					AddThing(11008, (608, -768, -999), 0);
+					AddThing(11009, (416, -672, -999), 0);
+					AddThing(11008, (1728, -352, -999), 0);
+					AddThing(11009, (1696, -640, -999), 0);
+					AddThing(11008, (-1056, -1984, -999), 0);
+					AddThing(11004, (122, -1632, -999), 270);
+					AddThing(11004, (-640, -2464, -999), 90);
+					AddThing(11004, (-640, 64, -999), 45);
+					AddThing(11004, (-352, -480, -999), 220);
+					AddThing(11004, (768, -384, -999), 220);
+					AddThing(11006, (416, -3328, -999), 40);
+					AddThing(11006, (512, -1760, -999), 20);
+					AddThing(11006, (1056, -288, -999), 130);
+					AddThing(11006, (-992, -1056, -999), 0);
+					AddThing(11005, (-1056, -2720, -999), 60);
+					AddThing(11005, (1664, -1088, -999), 80);
+					AddThing(11005, (96, -2048, -999), 100);
+					AddThing(11007, (1472, -704, -999), 180);
+					AddThing(11007, (128, -3072, -999), 80);
+					AddThing(11010, (800, -2848, -999), 80);
+					AddThing(11010, (-576, -2720, -999), 80);
+					AddThing(11010, (1792, -1920, -999), 80);
+					AddThing(11010, (704, -1696, -999), 80);
+					AddThing(11010, (-32, -352, -999), 80);
+					AddThing(11010, (-128, -1088, -999), 80);
+					AddThing(11010, (-832, -192, -999), 80);
+					AddThing(25918, (-184, -2168, -999), 0);
+				}
+				Break;
+
+			//map15
+			case '1a540ba717bf9ec85f8522594c352f2a':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCIT1",TexMan.Type_Any),TexMan.CheckForTexture("SKYCIT2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("GRASS1", "JUNKY15",0);
+					levellocals.ReplaceTextures("GRASS2", "JUNKY15",0);
+					levellocals.ReplaceTextures("SLIME12", "NUKAGE1",0);
+					levellocals.ReplaceTextures("WOOD5", "BRONZE1",0);
+					levellocals.ReplaceTextures("WOOD12", "INDUS3",0);
+					levellocals.ReplaceTextures("BIGBRIK2", "INDUS4",0);
+					levellocals.ReplaceTextures("BROWNHUG", "ASHWALL3",0);
+					levellocals.ReplaceTextures("FLAT5_2", "FLOOR0_2",0);
+					levellocals.ReplaceTextures("FLAT5_1", "METAIND3",0);
+					levellocals.ReplaceTextures("CEIL1_1", "SLIME16",0);
+					levellocals.ReplaceTextures("WOODMET2", "NEWDOR3",0);
+					levellocals.ReplaceTextures("WOODMET4", "NEWDOR3",0);
+					levellocals.ReplaceTextures("WOODMET1", "SUPPORT3",0);
+					levellocals.ReplaceTextures("WOODVERT", "METAIND4",0);
+					
+					AddThing(15848, (-704, -1664, -999), 0);
+					AddThing(15848, (-288, -1600, -999), 0);
+					AddThing(15848, (-64, -1568, -999), 0);
+					AddThing(15848, (480, -960, -999), 0);
+					AddThing(15848, (1344, -1280, -999), 0);
+					AddThing(15848, (1600, -1568, -999), 0);
+					AddThing(15848, (-160, -2912, -999), 0);
+					AddThing(15848, (-832, -544, -999), 0);
+					AddThing(15848, (-384, 320, -999), 0);
+					AddThing(15848, (384, 320, -999), 0);
+					AddThing(11011, (416, 224, -999), 0);
+					AddThing(11011, (704, 704, -999), 0);
+					AddThing(11011, (832, 1056, -999), 0);
+					AddThing(11011, (1472, 1056, -999), 0);
+					AddThing(11011, (224, -544, -999), 0);
+					AddThing(11011, (672, -704, -999), 0);
+					AddThing(11011, (1632, 672, -999), 0);
+					AddThing(11011, (1536, -256, -999), 0);
+					AddThing(11011, (-224, -480, -999), 0);
+					AddThing(11011, (-480, 192, -999), 0);
+					AddThing(11011, (-672, -672, -999), 0);
+					AddThing(11011, (-480, -1408, -999), 0);
+					AddThing(11011, (-736, -1888, -999), 0);
+					AddThing(11011, (-32, -1696, -999), 0);
+					AddThing(11011, (1376, -1664, -999), 0);
+					AddThing(11011, (1920, -1792, -999), 0);
+					AddThing(11011, (1344, -1184, -999), 0);
+					AddThing(11011, (2208, -2528, -999), 0);
+					AddThing(11011, (1472, -2752, -999), 0);
+					AddThing(11011, (1184, -3008, -999), 0);
+					AddThing(11011, (288, -3168, -999), 0);
+					AddThing(11011, (-64, -2688, -999), 0);
+					AddThing(11011, (-480, -2336, -999), 0);
+					AddThing(11003, (512, 416, -999), 0);
+					AddThing(11002, (1696, -1312, -999), 0);
+					AddThing(70, (672, -3424, -999), 0);
+					AddThing(70, (1024, -1024, -999), 0);
+					AddThing(11008, (384, -1408, -999), 0);
+					AddThing(11008, (608, -768, -999), 0);
+					AddThing(11009, (416, -672, -999), 0);
+					AddThing(11009, (-768, -1600, -999), 0);
+					AddThing(11008, (-1056, -1984, -999), 0);
+					AddThing(11008, (1568, -1536, -999), 0);
+					AddThing(11009, (-192, -3040, -999), 0);
+					AddThing(11008, (1184, -3264, -999), 0);
+					AddThing(11008, (704, -3264, -999), 0);
+					AddThing(11008, (416, -3264, -999), 0);
+					AddThing(11009, (1600, -224, -999), 0);
+					AddThing(11009, (-192, -64, -999), 0);
+					AddThing(11004, (122, -1632, -999), 270);
+					AddThing(11004, (-288, -2944, -999), 90);
+					AddThing(11006, (416, -3328, -999), 40);
+					AddThing(11005, (-1056, -2720, -999), 60);
+					AddThing(11006, (896, -832, -999), 80);
+					AddThing(11007, (512, 96, -999), 0);
+					AddThing(11006, (-288, 416, -999), 0);
+					AddThing(11006, (1056, 896, -999), 45);
+					AddThing(11006, (896, -1280, -999), 45);
+					AddThing(11005, (928, -256, -999), 135);
+					AddThing(11010, (1568, -1664, -999), 80);
+					AddThing(11010, (-32, -352, -999), 80);
+					AddThing(11010, (-832, -192, -999), 80);
+					AddThing(11010, (128, -3456, -999), 80);
+					AddThing(11010, (1536, -640, -999), 80);
+					AddThing(11010, (576, -1152, -999), 80);
+				}
+				Break;
+
+			//map16
+			case '6b60f37b91309dff1cdf02e5e476210d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCIT1",TexMan.Type_Any),TexMan.CheckForTexture("SKYCIT2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR6", "SPCDOOR3",0);
+					levellocals.ReplaceTextures("MFLR8_4", "APOCTX1",0);
+					Level.Sectors[21].settexture(Sector.floor,TexMan.CheckForTexture("JUNKY15",TexMan.Type_Any));
+					
+					AddThing(25916, (1248, -928, -999), 0);
+					AddThing(11001, (-1120, -384, -999), 0);
+					AddThing(11001, (-1280, -640, -999), 0);
+					AddThing(11001, (-1792, -352, -999), 0);
+					AddThing(11001, (-1408, 128, -999), 0);
+					AddThing(11001, (-1024, 768, -999), 0);
+					AddThing(11001, (-1536, 1184, -999), 0);
+					AddThing(11001, (-1536, 1920, -999), 0);
+					AddThing(11001, (288, 2016, -999), 0);
+					AddThing(11001, (1024, 1440, -999), 0);
+					AddThing(11001, (1024, 768, -999), 0);
+					AddThing(11001, (1728, -672, -999), 0);
+					AddThing(11001, (1024, -1248, -999), 0);
+					AddThing(11001, (-192, -1824, -999), 0);
+					AddThing(11001, (-416, -128, -999), 0);
+					AddThing(11001, (-352, 928, -999), 0);
+					AddThing(11001, (1568, 960, -999), 0);
+					AddThing(11001, (-1888, -832, -999), 0);
+					AddThing(11001, (-96, -992, -999), 0);
+					AddThing(11001, (512, 0, -999), 0);
+					AddThing(11001, (128, 736, -999), 0);
+					AddThing(15848, (-448, -224, -999), 0);
+					AddThing(15848, (-384, 192, -999), 0);
+					AddThing(15848, (448, -32, -999), 0);
+					AddThing(15848, (1472, 704, -999), 0);
+					AddThing(15848, (512, 960, -999), 0);
+					AddThing(15848, (-736, 1920, -999), 0);
+					AddThing(11011, (-480, -1696, -999), 0);
+					AddThing(11011, (-1408, -864, -999), 0);
+					AddThing(11011, (1248, -1280, -999), 0);
+					AddThing(11011, (1664, -576, -999), 0);
+					AddThing(11011, (1184, 672, -999), 0);
+					AddThing(11011, (352, 992, -999), 0);
+					AddThing(11011, (-32, 2208, -999), 0);
+					AddThing(11011, (-1472, 512, -999), 0);
+					AddThing(11011, (-736, 704, -999), 0);
+					AddThing(11011, (-1632, 1696, -999), 0);
+					AddThing(11003, (-1248, 864, -999), 0);
+					AddThing(11003, (832, 960, -999), 0);
+					AddThing(11002, (768, -1408, -999), 0);
+					AddThing(70, (1120, -3424, -999), 0);
+					AddThing(70, (-1376, -160, -999), 0);
+					AddThing(70, (96, -2848, -999), 0);
+					AddThing(70, (1024, -1024, -999), 0);
+					AddThing(11008, (384, -1408, -999), 0);
+					AddThing(11008, (608, -768, -999), 0);
+					AddThing(11008, (1728, -352, -999), 0);
+					AddThing(11009, (1696, -640, -999), 0);
+					AddThing(11008, (-1056, -1984, -999), 0);
+					AddThing(11009, (-352, -160, -999), 0);
+					AddThing(11008, (-448, -64, -999), 0);
+					AddThing(11008, (-32, 1088, -999), 0);
+					AddThing(11004, (992, 1504, -999), 270);
+					AddThing(11004, (1504, 768, -999), 90);
+					AddThing(11006, (-736, 896, -999), 45);
+					AddThing(11004, (-64, -1824, -999), 220);
+					AddThing(11004, (-1536, 1440, -999), 220);
+					AddThing(11006, (-1600, -832, -999), 40);
+					AddThing(11006, (-480, -512, -999), 20);
+					AddThing(11006, (960, -224, -999), 130);
+					AddThing(11006, (1088, -1472, -999), 0);
+					AddThing(11005, (672, 672, -999), 135);
+					AddThing(11005, (-1376, 0, -999), 80);
+					AddThing(11005, (-576, 1024, -999), 100);
+					AddThing(11007, (672, 1920, -999), 180);
+					AddThing(11007, (-1088, -448, -999), 80);
+					AddThing(11010, (-1184, 416, -999), 80);
+					AddThing(11010, (-576, -2720, -999), 80);
+					AddThing(11010, (1792, -1920, -999), 80);
+					AddThing(11010, (704, -1696, -999), 80);
+					AddThing(11010, (-128, -1088, -999), 80);
+					AddThing(11010, (-832, -192, -999), 80);
+					AddThing(11010, (-1568, 1440, -999), 80);
+					AddThing(11010, (-64, 1920, -999), 80);
+					AddThing(11010, (1696, 672, -999), 80);
+					AddThing(11010, (-288, 96, -999), 80);
+					AddThing(7265, (-2064, 256, -999), 0);
+				}
+				Break;
+
+			//map18
+			case '0d491365c1b88b7d1b603890100dd03e':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any),TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any));
+					levellocals.ReplaceTextures("RROCK20", "GRASS3",0);
+					levellocals.ReplaceTextures("NUKAGE3", "BLOOD1",0);
+					levellocals.ReplaceTextures("TANROCK5", "STONE7",0);
+					levellocals.ReplaceTextures("NUKEPOIS", "STONE5",0);
+					levellocals.ReplaceTextures("RROCK13", "APOCTX1",0);
+					levellocals.ReplaceTextures("MFLR8_4", "APOCTX1",0);
+					
+					AddThing(11011, (-1280, -1376, -999), 0);
+					AddThing(11011, (-896, -1536, -999), 0);
+					AddThing(11011, (-480, -1504, -999), 0);
+					AddThing(11011, (-128, -1280, -999), 0);
+					AddThing(11003, (160, -992, -999), 0);
+					AddThing(11002, (-1440, -1120, -999), 0);
+					AddThing(11009, (-416, -928, -999), 0);
+					AddThing(11008, (256, 864, -999), 0);
+					AddThing(11008, (192, 1280, -999), 0);
+					AddThing(11008, (288, 960, -999), 0);
+					AddThing(11008, (-480, -448, -999), 0);
+					AddThing(11008, (-1216, -448, -999), 0);
+					AddThing(11008, (256, 864, -999), 0);
+					AddThing(11009, (-1312, -352, -999), 0);
+					AddThing(11009, (-1632, -64, -999), 0);
+					AddThing(11006, (-992, -1056, -999), 0);
+					AddThing(11010, (-256, -992, -999), 80);
+				}
+				Break;
+
+			//map19
+			case 'b5506b1e8f2fc272ad0c77b9e0df5491':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any),TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any));
+					
+					AddThing(7265, (-1600, 1728, -999), 0);
+				}
+				Break;
+
+			//map20
+			case '8898f5ec9cbdcd98019a1bc1bf892a8a':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any),TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR6", "NEWDOR4",0);
+					levellocals.ReplaceTextures("TANROCK5", "STONE7",0);
+					levellocals.ReplaceTextures("ROCK1", "STONE5",0);
+					levellocals.ReplaceTextures("ROCK2", "STONE5",0);
+					levellocals.ReplaceTextures("ROCK3", "ASHWALL2",0);
+					levellocals.ReplaceTextures("ROCK5", "STONE6",0);
+					levellocals.ReplaceTextures("METAL", "BRWINDOW",0);
+					levellocals.ReplaceTextures("RROCK19", "APOCTX1",0);
+					Level.Sectors[53].settexture(Sector.floor,TexMan.CheckForTexture("APOCTX1",TexMan.Type_Any));
+					OffsetSectorPlane(53, Sector.floor, 184);
+					
+					AddThing(11011, (704, -1504, -999), 0);
+					AddThing(11003, (992, -2784, -999), 0);
+					AddThing(11002, (736, -1408, -999), 0);
+					AddThing(11009, (1696, -640, -999), 0);
+					AddThing(11008, (-1056, -1984, -999), 0);
+					AddThing(11004, (122, -1632, -999), 270);
+					AddThing(11006, (-992, -1056, -999), 0);
+					AddThing(11005, (96, -2048, -999), 100);
+					AddThing(11007, (128, -3072, -999), 80);
+					AddThing(11010, (-832, -192, -999), 80);
+					AddThing(25917, (4064, -640, 370), 0);
+				}
+				Break;
+
+			//map24
+			case '3eff15c64a03b36e8e47926c6df9ef70':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+					levellocals.ReplaceTextures("CEIL5_1", "F_SKY1", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("NUKAGE3", "LAVA1",0);
+					levellocals.ReplaceTextures("SFALL4", "BRICK6",0);
+					levellocals.ReplaceTextures("TEKBRON1", "BRICK6",0);
+				}
+				Break;
+
+			//map25
+			case '94893a0dc429a22adc4b3a73da537e16':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+					levellocals.ReplaceTextures("FLAT5_5", "F_SKY1", TexMan.NOT_FLOOR);
+					levellocals.ReplaceTextures("PANCASE2", "BRICK7",0);
+					levellocals.ReplaceTextures("PANEL2", "BRICK6",0);
+					levellocals.ReplaceTextures("PANEL1", "BRICKLIT",0);
+					
+					AddThing(26012, (0,0,0),0);
+				}
+				Break;
+
+			//map26
+			case '1037366026aab4b0cf11bab27db90e4e':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//map27
+			case '110f84de041052b59307faf0293e6bc0':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//map28
+			case '84bb2c8ed2343c91136b87f1832e7ca5':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//map30
+			case '5eecd88f4491f516d590ce4bbf45f532':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0) 
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any),TexMan.CheckForTexture("SKYHELF",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR6", "SPCDOOR3",0);
+					levellocals.ReplaceTextures("ZZZFACE1", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE2", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE3", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE4", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE5", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE6", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE7", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE8", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("ZZZFACE9", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("PIPE6", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("PIPE4", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("PIPE2", "SKSNAKE2",0);
+					levellocals.ReplaceTextures("BLOOD3", "SFLR6_4",0);
+					levellocals.ReplaceTextures("RROCK08", "F_SKY1",0);
+					levellocals.ReplaceTextures("BDSLIME1", "BDBLOOD1",0);
+					levellocals.ReplaceTextures("BDSFALL1", "BDBFALL1",0);
+					//OffsetSectorPlane(9, Sector.ceiling, -32); //this breaks the map
+					
+					AddThing(26008, (2880,1048,366),0);
+					AddThing(26009, (2880,1068,346),0);
+					AddThing(26010, (2895,1108,316),0);
+					AddThing(26011, (2855,1148,296),0);
+					AddThing(26009, (2855,1188,316),0);
+					AddThing(26010, (2865,1228,80),0); //
+					AddThing(26011, (2880,1248,100),0); //
+					AddThing(26010, (2900,1288,140),0); //
+					AddThing(26009, (2885,1328,160),0); //
+					AddThing(26011, (2880,1368,170),0); //
+					AddThing(2550, (2880,1048,416),0);
+				}
+				Break;
+
+			//TNT map01
+			case '8391b0eb996c55b5ed4343d18b8ad2c8':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK5", 0);
+					levellocals.ReplaceTextures("ROCK2", "TANROCK5", 0);
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("METAL2", "METALIND", 0);
+					levellocals.ReplaceTextures("METAL6", "METALIND", 0);
+					levellocals.ReplaceTextures("GRNLITE1", "CEIL5_1", 0);
+					levellocals.ReplaceTextures("LITE3", "LIT05", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("SLIME15", "METALIN8", TexMan.NOT_CEILING);
+
+					AddThing(15848, (640, 992, -999),0);
+					AddThing(15848, (496, 592, -999),0);
+					AddThing(15848, (448, 416, -999),0);
+					AddThing(15849, (320, 608, -999),0);
+					AddThing(11033, (384, 160, -999),0);
+					AddThing(11033, (672, 352, -999),0);
+					AddThing(11033, (720, 608, -999),0);
+					AddThing(11033, (784, 1120, -999),0);
+					AddThing(11033, (448, 1344, -999),0);
+					AddThing(15878, (-256, -96, -999),0);
+					AddThing(15878, (-192, 352, -999),0);
+					AddThing(15878, (160, 456, -999),0);
+					AddThing(15878, (-288, 1120, -999),0);
+					AddThing(15878, (-288, 1312, -999),0);
+					AddThing(25860, (424, 540, -999),0);
+					AddThing(25867, (-60, 412, -999),0);
+				}
+				Break;
+
+
+
+			//TNT map02
+			case 'ba0f19e30dc166573e5b58a4efcb4d45':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("TANROCK5", "BRICK9", 0);
+					levellocals.ReplaceTextures("TEKWALL4", "TANROCK5", 0);
+					levellocals.ReplaceTextures("BIGBRIK1", "INDUS3", 0);
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("METAL2", "METALIND", 0);
+					levellocals.ReplaceTextures("METAL6", "METALIND", 0);
+					levellocals.ReplaceTextures("SLIME05", "NUKAGE1", 0);
+					levellocals.ReplaceTextures("GSTONE1", "BUNKER01", 0);
+					levellocals.ReplaceTextures("GSTONE1", "BUNKER01", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					levellocals.ReplaceTextures("TLITE6_6", "f_sky1", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("GRASS2", "DESERT01", 0);
+					//levellocals.ReplaceTextures("BROWNGRN", "METALIN4", 0);
+					levellocals.ReplaceTextures("LITE3", "LIT05", 0);
+					//levellocals.ReplaceTextures("SLIME15", "METALIN8", TexMan.NOT_CEILING);
+				}
+				Break;
+
+			//TNT map03
+			case '875aef88a5443843761bfbd386500c7b':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGBRIK1", "INDUS3", 0);
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					levellocals.ReplaceTextures("TLITE6_6", "f_sky1", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+					//levellocals.ReplaceTextures("BROWNGRN", "METALIN4", 0);
+					levellocals.ReplaceTextures("LITE3", "LIT05", 0);
+					//levellocals.ReplaceTextures("SLIME15", "METALIN8", TexMan.NOT_CEILING);
+				}
+				Break;
+
+			//TNT map04
+			case '36f32ed4632e036bde6471162e966031':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGBRIK1", "INDUS3", 0);
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					levellocals.ReplaceTextures("GRASS2", "DESERT01", 0);
+					levellocals.ReplaceTextures("TLITE6_6", "f_sky1", 0);
+					//levellocals.ReplaceTextures("BROWNGRN", "METALIN4", 0);
+					levellocals.ReplaceTextures("LITE3", "LIT05", 0);
+					//levellocals.ReplaceTextures("SLIME15", "METALIN8", TexMan.NOT_CEILING);
+				}
+				Break;
+
+			//TNT map05
+			case '4596ec72ef76a3e8c97a9e2179bb81d7':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGBRIK1", "INDUS3", 0);
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					levellocals.ReplaceTextures("GRASS2", "SLIME14", 0);
+					levellocals.ReplaceTextures("f_sky1", "CEIL5_1", 0);
+					levellocals.ReplaceTextures("LITE3", "LIT05", 0);
+
+					AddThing(26013, (1280, 672, 999),0);
+					AddThing(26013, (1280, -96, 999),0);
+					AddThing(26013, (1664, -96, 999),0);
+					AddThing(26013, (1664, 672, 999),0);
+					AddThing(26013, (1664, 256, 999),0);
+					AddThing(26013, (1280, 256, 999),0);
+					AddThing(13845, (1408, 32, -999),90);
+					AddThing(13845, (1408, 736, -999),90);
+				}
+				Break;
+
+			//TNT map06
+			case '214beb43049644432b10dafa88b184b6':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+				}
+				Break;
+
+			//TNT map07
+			case '0f898f0688aecd42f2cd102fae06f271':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					levellocals.ReplaceTextures("FLOOR7_1", "DESERT01", 0);
+					levellocals.ReplaceTextures("RROCK03", "DESERT01", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("GRASS2", "DESERT01", 0);
+				}
+				Break;
+
+			//TNT map08
+			case '1e785e841a5247b6223c042ec712ebb3':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					levellocals.ReplaceTextures("WFALL1", "SPACM0", 0);
+					levellocals.ReplaceTextures("RROCK03", "DESERT01", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("GRASS2", "DESERT01", 0);
+				}
+				Break;
+
+			//TNT map09
+			case '5f8027c2a807bba0f479e25a585addc3':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK5", 0);
+					levellocals.ReplaceTextures("ROCK2", "TANROCK5", 0);
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("METAL2", "METALIND", 0);
+					levellocals.ReplaceTextures("METAL6", "METALIND", 0);
+					levellocals.ReplaceTextures("GRNLITE1", "CEIL5_1", 0);
+					levellocals.ReplaceTextures("LITE3", "LIT05", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("SLIME15", "METALIN8", TexMan.NOT_CEILING);
+				}
+				Break;
+
+			//TNT map10
+			case 'd32ec3ae02ef4c190c8a228411ce605e':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("RROCK03", "DESERT01", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("GRASS2", "DESERT01", 0);
+				}
+				Break;
+
+			//TNT map11
+			case '92125345fff3309ebcc9b2f7e064d67c':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ1",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					levellocals.ReplaceTextures("FLOOR6_2", "DESERT01", 0);
+					levellocals.ReplaceTextures("RROCK03", "DESERT01", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+					//levellocals.ReplaceTextures("GRASS1", "DESERT01", 0);
+					//levellocals.ReplaceTextures("GRASS2", "DESERT01", 0);
+				}
+				Break;
+
+			//TNT map12
+			case '0907599466da895ce8b3b2508cc4f7ab':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+					levellocals.ReplaceTextures("RROCK03", "DESERT01", 0);
+					levellocals.ReplaceTextures("BROWN144", "TANROCK5", 0);
+					levellocals.ReplaceTextures("FLOOR7_1", "DESERT01", 0);
+				}
+				Break;
+
+			//TNT map13
+			case '18e6ad88b7df0e27cb20d76f82fcd299':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("ASHWALL7", "BUNKER01", 0);
+				}
+				Break;
+
+			//TNT map14
+			case '1cd346aaf457e4a963c0fa68b72b24bb':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map15
+			case 'dfc18b92bf3e8142b8684ecd8bd2ef06':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+					levellocals.ReplaceTextures("FLOOR7_1", "DESERT01", 0);
+					levellocals.ReplaceTextures("RROCK03", "DESERT01", 0);
+					levellocals.ReplaceTextures("BROWNHUG", "TANROCK8", 0);
+					levellocals.ReplaceTextures("GSTVINE1", "TANROCK8", 0);
+				}
+				Break;
+
+			//TNT map16
+			case '43c1f1e68b3c4bdf9412f7a1335b5ec1':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map17
+			case '8d59f49ecdbfc95a1b857dd541c98b22':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map18
+			case 'c4f0e8897b7dded102edb0d81d53227a':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map19
+			case '6c735d5a4efb205c012e24491462eb43':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map20
+			case 'a119c0b1e5fe7e2eb069deca3fd3ba46':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map21
+			case '55c8da7b531ae47014ad73fff4687a36':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map22
+			case 'f89d8aa656ce772b3ac7f0d17193dd58':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map23
+			case 'fc02516ee32c991542e3fd92dae7420b':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map24
+			case '82c1907a76479d94a4ff8869d492b266':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any),TexMan.CheckForTexture("SKYIJ2",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR1", "TNTDOOR1", 0);
+					levellocals.ReplaceTextures("DOOR1", "TNTDOR1S", 0);
+					levellocals.ReplaceTextures("TEKGREN1", "GREIND1", 0);
+					levellocals.ReplaceTextures("TEKGREN2", "GREIND2", 0);
+					levellocals.ReplaceTextures("TEKGREN3", "GREIND3", 0);
+					levellocals.ReplaceTextures("TEKGREN4", "GREIND4", 0);
+					levellocals.ReplaceTextures("TEKGREN5", "GREIND5", 0);
+				}
+				Break;
+
+			//TNT map25
+			case '1d01e5f4a316d723eee7d9d3e620cb80':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//TNT map26
+			case 'e7b4e2612cbf804f8e8bd292ca4fa926':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//TNT map27
+			case '603032bbf28c9347784536022b3c5cbe':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//TNT map28
+			case '344bdbde689b2e726de5790dd7c84bca':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//TNT map29
+			case '2c4a3356c5eb3526d2c72a4aa4b18a36':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+				}
+				Break;
+
+			//TNT map30
+			case '42b68b84ff8e55f264c31e6f4cfea82d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+					AddThing(26014,(3072,-864,-999),0);
+				}
+				Break;
+
+			//Plutonia map01
+			case 'acf8b3fa7f972ff969127ab920c6c12d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BDSLIME1", "BDFWATER",0);
+					levellocals.ReplaceTextures("A-BROWN4", "NEWDOR1",0);
+
+
+					AddThing(26015, (0, 0, 0), 0);
+					AddThing(15848, (640, -224, -999), 0);
+					AddThing(15848, (-864, -96, -999), 0);
+					AddThing(15848, (-528, -96, -999), 0);
+					AddThing(15848, (640, -224, -999), 0);
+					AddThing(15848, (2016, -880, -999), 0);
+					AddThing(15848, (2032, -592, -999), 0);
+					AddThing(15849, (1376, -320, -999), 0);
+					AddThing(15849, (992, -192, -999), 0);
+					AddThing(15849, (640, -160, -999), 0);
+					AddThing(15849, (736, -32, -999), 0);
+					AddThing(15849, (800, -288, -999), 0);
+					AddThing(15849, (752, 160, -999), 0);
+					AddThing(15849, (1024, -96, -999), 0);
+					AddThing(15849, (-928, -160, -999), 0);
+					AddThing(15849, (1824, -736, -999), 0);
+					AddThing(15853, (-512, -224, -999), 0);
+					AddThing(15853, (-944, -32, -999), 0);
+					AddThing(15853, (-784, 176, -999), 0);
+					AddThing(15853, (640, -432, -999), 0);
+					AddThing(15853, (1040, -352, -999), 0);
+					AddThing(15853, (1056, 0, -999), 0);
+					AddThing(15853, (944, 96, -999), 0);
+					AddThing(15853, (704, 224, -999), 0);
+					AddThing(15853, (1856, -432, -999), 0);
+					AddThing(11034, (1040, -304, 133), 0);
+					AddThing(11834, (1072, -176, 133), 0);
+					AddThing(11834, (288, -48, 999), 0);
+					AddThing(11034, (128, -96, 999), 0);
+					AddThing(11834, (-32, -128, 999), 0);
+					AddThing(11034, (-192, -48, 999), 0);
+					AddThing(11834, (-224, -128, 999), 0);
+					AddThing(11034, (-464, -48, 128), 0);
+					AddThing(11834, (-528, 128, 152), 0);
+					AddThing(11834, (-592, 192, 133), 0);
+					AddThing(11034, (-752, 192, 152), 0);
+					AddThing(11034, (-864, 176, 152), 0);
+					AddThing(11834, (-1008, 208, 144), 0);
+					AddThing(11834, (-1136, -16, 130), 0);
+					AddThing(11034, (-912, -368, 140), 0);
+					AddThing(11834, (-672, -432, 140), 0);
+					AddThing(11834, (-583, -359, 140), 0);
+					AddThing(11034, (848, 304, 152), 0);
+					AddThing(11834, (768, 304, 140), 0);
+					AddThing(11034, (-464, -112, 160), 0);
+					AddThing(11834, (592, 208, 140), 0);
+					AddThing(11034, (480, 128, 160), 0);
+					AddThing(11834, (720, -496, 140), 0);
+					AddThing(11834, (800, -496, 176), 0);
+					AddThing(11034, (840, -496, 160), 0);
+					AddThing(11834, (1008, -416, 128), 0);
+					AddThing(11834, (128, 528, 128), 0);
+					AddThing(11034, (240, 528, 132), 0);
+					AddThing(11834, (128, 1168, 144), 0);
+					AddThing(11034, (240, 1168, 136), 0);
+					AddThing(11834, (-176, 768, 84), 0);
+					AddThing(11034, (-176, 896, 84), 0);
+					AddThing(11834, (-176, 846, 82), 0);
+					AddThing(11034, (560, 912, 102), 0);
+					AddThing(11834, (560, 800, 92), 0);
+					AddThing(26016, (176, 720, -99), 0);
+					AddThing(26016, (288, 800, -99), 0);
+					AddThing(26016, (112, 880, -99), 0);
+					AddThing(26016, (-688, -256, -99), 0);
+					AddThing(26016, (-640, 96, -99), 0);
+					AddThing(26016, (-704, 0, -99), 0);
+					AddThing(26016, (-1024, 64, -99), 0);
+					AddThing(26016, (1104, -1136, -99), 0);
+					AddThing(26016, (864, -1056, -99), 0);
+					AddThing(26016, (720, -1152, -99), 0);
+					AddThing(26016, (-704, 0, -99), 0);
+					AddThing(26016, (-1024, 64, -99), 0);
+					AddThing(26016, (800, -1696, -99), 0);
+					AddThing(26016, (992, -1584, -99), 0);
+					AddThing(25887, (1616, -928, -99), 0);
+					AddThing(25887, (1136, -1120, -99), 0);
+					AddThing(25887, (2096, -16, -99), 0);
+					AddThing(25887, (2512, -32, -99), 0);
+					AddThing(25887, (2512, 416, -99), 0);
+					AddThing(25887, (2080, 448, -99), 0);
+					AddThing(25877, (-800, -176, -99), 0);
+					AddThing(25877, (320, -128, -99), 0);
+					AddThing(25877, (144, -48, -99), 0);
+					AddThing(25877, (656, -208, -99), 0);
+					AddThing(25877, (896, -96, -99), 0);
+					AddThing(25877, (704, 80, -99), 0);
+					AddThing(25877, (1952, -912, -99), 0);
+					AddThing(25877, (608, 912, -99), 0);
+					AddThing(25877, (416, 720, -99), 0);
+					AddThing(25877, (0, 1024, -99), 0);
+					AddThing(25877, (-208, 800, -99), 0);
+					AddThing(15849, (-208, 912, -99), 0);
+					AddThing(15849, (-80, 960, -99), 0);
+					AddThing(15849, (368, 912, -99), 0);
+					AddThing(15849, (-32, -96, -99), 0);
+					AddThing(15859, (-544, 224,999), 0);
+					AddThing(15859, (-544, -416,999), 0);
+					AddThing(15859, (-864, -512,999), 0);
+					AddThing(15859, (-864, 320,999), 0);
+					AddThing(15859, (-1280, -32,999), 0);
+					AddThing(15859, (-32, -96,999), 0);
+					AddThing(15859, (192, 192,999), 0);
+					AddThing(15859, (128, -384,999), 0);
+					AddThing(15859, (128, -768,999), 0);
+					AddThing(15859, (896, -1632,999), 0);
+					AddThing(15859, (1472, -544,999), 0);
+					AddThing(15859, (2304, 224,999), 0);
+					AddThing(15859, (192, 1376,999), 0);
+					AddThing(15859, (800, -608,999), 0);
+					AddThing(25895, (1440, -688,-999), 90);
+					AddThing(25895, (1589, -630,-999), 135);
+					AddThing(25895, (1648, -480,-999), 180);
+					//AddThing(15898, (2208, -352,-999), 0);
+					//AddThing(15898, (2240, -304,-999), 0);
+					//AddThing(15898, (2400, -352,-999), 180);
+					//AddThing(15898, (2368, -304,-999), 180);
+					//AddThing(15898, (-928, 480,-999), 180);
+					//AddThing(15898, (-848, 480,-999), 180);
+					AddThing(25889, (1344, 240,-999), 180);
+					AddThing(25888, (1309, 222,-999), 0);
+					AddThing(25888, (1344, 176,-999), 90);
+					AddThing(25889, (-976, -592,-999), 45);
+					AddThing(2014, (-976, -592, 138), 180);
+					AddThing(25888, (-960, -576,-999), 225);
+					AddThing(9033, (1952, -736,-999), 225);
+					AddThing(25913, (1540, -376,-999), 225);
+					AddThing(25913, (1596, -376,-999), 225);
+					AddThing(25913, (1544, -344,-999), 225);
+					AddThing(25913, (1592, -344,-999), 225);
+
+					AddThing(25913, (2024, -376,-999), 225);
+					AddThing(25913, (2072, -376,-999), 225);
+					AddThing(25913, (2024, -344,-999), 225);
+					AddThing(25913, (2072, -344,-999), 225);
+				}
+				Break;
+
+			//Plutonia map02
+			case 'f28e723bdd820d5de94448e238f5dbba':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any));
+					levellocals.ReplaceTextures("ROCK5", "CLIFF05C",0);
+					levellocals.ReplaceTextures("SLIME06", "BLACK",0);
+					levellocals.ReplaceTextures("GATE2", "BLACK",0);
+					levellocals.ReplaceTextures("RROCK09", "RROCK18",0);
+					levellocals.ReplaceTextures("A-VINE1", "AVINE1B",0);
+					Level.Sectors[19].settexture(Sector.floor,TexMan.CheckForTexture("FWATER1",TexMan.Type_Any));
+					OffsetSectorPlane(19, Sector.floor, -128);
+
+					AddThing(25923, (-1152, 1888,-9999), 225);
+					AddThing(25923, (-672, 1888,-9999), 225);
+					AddThing(25923, (-160, 1952,-9999), 225);
+					AddThing(25925, (-1264, -432,128), 0);
+					AddThing(25926, (-492, 1928,-9999), 0);
+					AddThing(25895, (-668, -668,-9999), 0);
+					AddThing(26017, (-1396, -208,-9999), 0);
+					AddThing(5050, (-836, -12,-9999), 0);
+					AddThing(5050, (-772, 0,-9999), 0);
+					AddThing(15847, (-964, -572, -999), 90);
+					AddThing(15847, (-964, -196, -999), 90);
+					AddThing(15847, (-1460, -332, -999), 90);
+					AddThing(15847, (-1472, -532, -999), 90);
+					AddThing(15847, (352, -352, -999), 90);
+					AddThing(15847, (352, 288, -999), 90);
+					AddThing(15847, (-3408, -264, -999), 90);
+					AddThing(15847, (-3032, -264, -999), 90);
+					AddThing(15847, (-2936, -556, -999), 90);
+					AddThing(15847, (-3440, -548, -999), 90);
+					AddThing(25927, (-1232, 672, -999), 0);
+					AddThing(25927, (-1544, 812, -999), 0);
+					AddThing(25927, (-1752, 664, -999), 180);
+					AddThing(25927, (-696, 992, -999), 90);
+					AddThing(25927, (-772, 1296, -999), 0);
+					AddThing(25928, (-1484, 1780, -999), 90);
+					AddThing(25928, (248, 1860, -999), 90);
+					AddThing(25928, (-1720, -464, -999), 90);
+					AddThing(25928, (-3504, -752, -999), 0);
+					AddThing(25928, (-3036, -784, -999), 180);
+					AddThing(25928, (-3252, -860, -999), 180);
+					AddThing(25929, (-1072, 2184, -999), -16);
+					AddThing(25929, (-632, 2252, -999), 0);
+					AddThing(25929, (-684, 1640, -999), 0);
+					AddThing(25929, (-212, 2268, -999), 0);
+
+				}
+				Break;
+
+			//Plutonia map03
+			case '6ac6c0f6a58b7be6c075fe90af859325':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any));
+					levellocals.ReplaceTextures("SLIME05", "SLIME01",0);
+
+					AddThing(25929, (896, -704, -999), 0);
+				}
+				Break;
+
+			//Plutonia map04
+			case '9badae6a69d83d143698b953647c4da3':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any));
+					levellocals.ReplaceTextures("METAL", "BSTONE1",0);
+					levellocals.ReplaceTextures("METAL2", "BSTONE2",0);
+					levellocals.ReplaceTextures("METAL3", "BSTONE3",0);
+					levellocals.ReplaceTextures("METAL4", "BSTONE3",0);
+					levellocals.ReplaceTextures("METAL7", "BSTONE3",0);
+					levellocals.ReplaceTextures("MIDGRATE", "BDEFEN1",0);
+					levellocals.ReplaceTextures("MIDBARS3", "BDEFEN1",0);
+					levellocals.ReplaceTextures("MIDBRONZ", "BDEFEN1",0);
+
+					AddThing(11034, (-208, 880, 200), 0);
+					AddThing(11834, (-48, 1040, 200), 0);
+					AddThing(11034, (-42, 320, 200), 0);
+					AddThing(11834, (-208, 448, 200), 0);
+					AddThing(11034, (144, 528, 212), 0);
+					AddThing(11834, (368, 528, 212), 0);
+					AddThing(11034, (688, 208, 200), 0);
+					AddThing(11834, (688, 528, 200), 0);
+					AddThing(11034, (240, 688, 212), 0);
+					AddThing(11034, (400, 688, 212), 0);
+					AddThing(11834, (-880, 320, 280), 0);
+					AddThing(11834, (-880, -288, 280), 0);
+					AddThing(25877, (-704, 16, 200), 0);
+					AddThing(25878, (-720, -80, 200), 0);
+					AddThing(11034, (-48, -368, 212), 0);
+					AddThing(11834, (-208, -432, 212), 0);
+				}
+				Break;
+
+			//Plutonia map05
+			case 'eb0d04aeb2841d5225caa576d7300d43':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any));
+
+					AddThing(25928, (3776, -1792, -999), 315);
+					AddThing(25929, (1904, -2112, -999), 45);
+					AddThing(25929, (2176, -2512, -999), 45);
+					AddThing(25929, (2528, -2624, -999), 315);
+					AddThing(25929, (2320, -2368, -999), 45);
+					AddThing(11034, (2496, -3216, 999), 0);
+					AddThing(11834, (2352, -3072, 999), 0);
+					AddThing(25930, (2864, -2704, 0), 0);
+					AddThing(43, (2992, -3456, 0), 0);
+					AddThing(43, (3136, -3072, 0), 0);
+					AddThing(43, (2768, -2992, 0), 0);
+					AddThing(43, (1888, -1984, 0), 0);
+					AddThing(43, (3568, -3888, 0), 0);
+					AddThing(43, (3888, -3664, 0), 0);
+					AddThing(43, (3680, -3360, 0), 0);
+					AddThing(15847, (3888, -3408, -999), 90);
+					AddThing(15847, (3280, -4016, -999), 90);
+					AddThing(11034, (3136, -3520, 999), 0);
+					AddThing(11834, (3264, -3424, 999), 0);
+					AddThing(11034, (3376, -3280, 999), 0);
+					AddThing(11834, (2160, -2288, 999), 0);
+					AddThing(11034, (2304, -2176, 999), 0);
+					AddThing(11834, (2064, -2432, 999), 0);
+				}
+				Break;
+
+			//Plutonia map06
+			case 'cc2c4d88729a8ba4b6d8a093c9d4e80d':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any));
+
+					AddThing(25930, (-96, -1824, 0), 0);
+					AddThing(11034, (-192, -496, 999), 0);
+					AddThing(11834, (-432, -224, 999), 0);
+					AddThing(11034, (-432, -96, 999), 0);
+					AddThing(11834, (176, 64, 999), 0);
+					AddThing(11034, (-256, 112, 999), 0);
+					AddThing(25877, (-704, 16, 0), 0);
+					AddThing(25878, (-720, -80, 0), 0);
+					AddThing(43, (-256, -2048, 12), 0);
+					AddThing(43, (48, -1968, 0), 0);
+					AddThing(43, (-240, -1712, 0), 0);
+					AddThing(43, (48, -1664, 0), 0);
+					AddThing(43, (64, -2304, 0), 0);
+					AddThing(54, (-96, -2160, 0), 0);	}
+				Break;
+
+			//Plutonia map07
+			case '8cc227c18a4639997547356c6a49fae8':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any),TexMan.CheckForTexture("SKYEAR4",TexMan.Type_Any));
+
+					AddThing(25877, (912, -480, 0), 0);
+					AddThing(25878, (272, -848, 0), 0);
+					AddThing(25878, (-784, 464, 0), 0);
+					AddThing(54, (-1024, 240, 0), 0);
+					AddThing(54, (-624, 1104, 0), 0);
+					AddThing(54, (368, 1200, 0), 0);
+					AddThing(54, (1184, 448, 0), 0);
+					AddThing(54, (1168, -464, 0), 0);
+					AddThing(54, (512, -1168, 0), 0);
+					AddThing(43, (-320, -896, 0), 0);
+					AddThing(43, (-80, 976, 0), 0);
+					AddThing(43, (-992, 592, 0), 0);
+					AddThing(43, (-832, -256, 0), 0);
+					AddThing(11034, (640, 288, 999), 0);
+					AddThing(11834, (432, 592, 999), 0);
+					AddThing(11034, (-208, 592, 999), 0);
+					AddThing(11834, (208, 592, 999), 0);
+					AddThing(11034, (-512, 288, 999), 0);
+					AddThing(11834, (-512, -256, 999), 0);
+					AddThing(11034, (-512, -320, 999), 0);
+					AddThing(11834, (-304, -560, 999), 0);
+					AddThing(11034, (-512, -320, 999), 0);
+					AddThing(11834, (336, -560, 999), 0);
+					AddThing(11834, (640, -256, 999), 0);
+				}
+				Break;
+
+			//Plutonia map29
+			case '850ac6d62f0ac57a4dd7ebc2689ac38e':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any),TexMan.CheckForTexture("SKYCITH",TexMan.Type_Any));
+					levellocals.ReplaceTextures("BIGDOOR6", "NEWDOR4",0);
+					levellocals.ReplaceTextures("GRASS1", "APOCTX1",0);
+					levellocals.ReplaceTextures("RROCK13", "APOCTX1B",0);
+
+					AddThing(7261, (416, 2240,-999), 225);
+					AddThing(7265, (3124, 384,-999), 45);
+					AddThing(7265, (3124, 300,-999), 45);
+					AddThing(7265, (3124, 216,-999), 45);
+				}
+				Break;
+
+			//Plutonia map30
+			case '279bb50468fe9f5b36c6d821e4902369':
+				If(Cvar.getcvar("bd_disablemapenhancements").getint() == 0)
+				{
+					Levellocals.ChangeSky(TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any),TexMan.CheckForTexture("SKYHEL",TexMan.Type_Any));
+					AddThing(26014,(-3648,5760,-999),0);
+				}
+				Break;
+
 				Break;
 		}
 	}

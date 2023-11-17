@@ -385,7 +385,7 @@ Tag "Pistol Zombie"
     Pain.Melee:
 	Pain.Fatality:
 		TNT1 A 0
-		TNT1 A 0 A_JumpIfInventory ("SKZombieman", 1, "GotoStealthKill")
+		//TNT1 A 0 A_JumpIfInventory ("SKZombieman", 1, "GotoStealthKill")
         TNT1 A 0 A_JumpIfInventory ("IsDown", 1, 8)
 		TNT1 A 0 A_SpawnItem ("HeadshotTarget4", 0, 40,0)
 	    PSPO G 4
@@ -516,7 +516,7 @@ Tag "Pistol Zombie"
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
 		TNT1 A 0 A_ChangeFlag("SOLID", 0)
 		TNT1 A 0 A_SpawnItem("FrozenPistolZombie")
-		TNT1 A 0 A_GiveToTarget("SoulAmmo", 10)
+		//TNT1 A 0 A_GiveToTarget("SoulAmmo", 10)
 		Stop
 		
 	}

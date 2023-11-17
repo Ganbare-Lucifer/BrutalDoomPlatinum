@@ -16,11 +16,6 @@
 	
 	override void CheckReplacement(ReplaceEvent e)
 	{
-	if (e.Replacee == "RealGibs") 
-		{
-		E.replacement = "nashgorerealgibs";
-		
-		}
 	If(bd_disabledecorations == FALSE)
 		{
 		
@@ -324,7 +319,7 @@
 		if (e.thing.bismonster && e.damagetype != "desintegrate" && e.thing.health < 1 && e.thing.target && !e.thing.findinventory("extractedsoul"))
 			{
 			e.thing.a_giveinventory("extractedsoul",1);
-			e.thing.a_giveinventory("soulammo",1,AAPTR_TARGET);
+			//e.thing.a_giveinventory("soulammo",1,AAPTR_TARGET);
 			
 				
 			If(e.thing.target is "demonplayer")
@@ -371,7 +366,7 @@
 			{
 				If(!passive && inflictor && inflictor.findinventory("grabberdamage"))
 					{
-						Newdamage = (damage * 8.0);
+						Newdamage = (damage * 4.0);
 					}
 			}
 	}

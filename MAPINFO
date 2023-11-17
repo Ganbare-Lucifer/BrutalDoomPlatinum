@@ -2,17 +2,32 @@ Gameinfo
 {
 	StatusBarClass = "BDP_HUD"
 	AddEventHandlers = "DoxBDHandler"
+	AddEventHandlers = "SalInvisHandler"
 	AddEventHandlers = "WeaponSpawnHandler"
 	AddEventHandlers = "RollHandler"
 	AddEventHandlers = "TiltPlusPlusHandler"
 	AddEventHandlers = "BDPModifier_Events", "BDPMenuSwitcher"
+	AddEventHandlers = "WeatherHandler"
+	quitmessages = "$EXITMSG1","$EXITMSG2","$EXITMSG3","$EXITMSG4","$EXITMSG5","$EXITMSG6","$EXITMSG7","$EXITMSG8",
+"$EXITMSG9","$EXITMSG10","$EXITMSG11","$EXITMSG12","$EXITMSG13","$EXITMSG14","$EXITMSG15","$EXITMSG16","$EXITMSG17","$EXITMSG18",
+"$EXITMSG19","$EXITMSG20","$EXITMSG21","$EXITMSG22","$EXITMSG23","$EXITMSG24","$EXITMSG25","$EXITMSG26","$EXITMSG27","$EXITMSG28",
+"$EXITMSG29","$EXITMSG30","$EXITMSG31","$EXITMSG32","$EXITMSG33","$EXITMSG34","$EXITMSG35","$EXITMSG36","$EXITMSG37","$EXITMSG38",
+"$EXITMSG39","$EXITMSG40","$EXITMSG41","$EXITMSG42","$EXITMSG43","$EXITMSG44","$EXITMSG45","$EXITMSG46","$EXITMSG47","$EXITMSG48",
+"$EXITMSG49","$EXITMSG50","$EXITMSG51","$EXITMSG52","$EXITMSG53","$EXITMSG54","$EXITMSG55","$EXITMSG56","$EXITMSG57","$EXITMSG58",
+"$EXITMSG59","$EXITMSG60","$EXITMSG61"
 }
 
 
 DoomEdNums
 {
+	2552 = Railgun
 	7265 = BDPBike
 	25871 = mjolnirpickup
+	26012 = bleedingsky
+	26015 = JungleRain
+	26018 = TitlePhobos
+	26019 = TitleMars
+	26020 = TNTShipSpawner
 }
 
 
@@ -33,6 +48,12 @@ episode BDM01
 episode test
 {
 	Name = "Testing Map"
+}
+
+
+map TITLEMAP "Title"
+{
+	music = D_DM2TTL	
 }
 
 
@@ -134,7 +155,7 @@ map TEST "UAC Testing Center"
 {
 	next = "MAP02"
 	secretnext = "MAP02"
-	sky1 = "SKYEAR1", 0.1
+	sky1 = "SKYEAR6", 0.1
 	cluster = 1
 	//par = 60
 	music = ORB

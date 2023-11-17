@@ -32,8 +32,6 @@ Class Brutalweapon : DoomWeapon //Weapon
 	Weapon.BobRangeY 0.4;
 	Weapon.BobSpeed 2.9;
 	Weapon.BobStyle "InverseAlpha";
-	VisibleToPlayerClass "BDoomer", "Doomer2", "Doomer3", "TacticalDoomer";
-	Inventory.ForbiddenTo "Purist";
 	brutalweapon.clearoverlays TRUE;
 	
 	}
@@ -49,6 +47,9 @@ Class Brutalweapon : DoomWeapon //Weapon
 		self.LineTrace(self.angle, range, self.pitch, 0, aimz, data:lt);
 		Actor victim = lt.HitActor;
 		int aimCheck = -6;
+		bool backsmack;
+		
+		
 		while (aimCheck++ < 6 && !victim)
 		{
 			self.LineTrace(self.angle + (aimCheck * 8), range, self.pitch, 0, aimz, data:lt);
@@ -60,22 +61,29 @@ Class Brutalweapon : DoomWeapon //Weapon
 			
 			vector3 victimAngles = level.sphericalCoords(victim.pos, self.pos, (victim.angle, victim.pitch));
 			
+			//if(abs(victimAngles.x) >= 120)
+			//{
+			//	backsmack = true;
+			//}
 		
 			double inertia = BDPMath.GetInertia(victim.mass);
 			self.A_Quake(2,3,0,20,"");
 			
-			if(doHitThrust)
+			if(doHitThrust && victim.bsolid)
 			{
 				self.vel *= 0;
 				self.vel += BDPMath.VecFromAngles(self.angle, self.pitch, -12);	
 			}
 					
 		}
+	
 		actor proj = A_FireProjectile(projectile, 0, 0, 0, spawnheight);
 		If(proj && victim && victim.bSHOOTABLE)
 		{
 			proj.setorigin(victim.pos,false);
 		}
+		
+		
 		return victim;
 	}
 	
@@ -127,7 +135,13 @@ Class Brutalweapon : DoomWeapon //Weapon
 	
 	Action void A_BDPMeleeStart(double range = 200)
 	{
-	if(A_CheckMeleeRange(skipWalls:true) < range) A_Recoil3D(-20); 
+	//if(A_CheckMeleeRange(skipWalls:true) < range) A_Recoil3D(-20); 
+		FLineTraceData lt;
+		LineTrace(angle, range, pitch, 0, player.viewheight, data:lt);
+		If(lt.hitactor && lt.hitactor.bsolid)
+		{
+			A_Recoil3D(-20);
+		}
 	}
 	
 	action double A_CheckMeleeRange(double maxrange = 512, bool skipWalls = false)
@@ -581,6 +595,16 @@ Actor CurrentActor; //A pointer to whatever actor the iterator is iterating thro
 							
 						
 				}
+		}
+	}
+	
+	Action void A_AlertMonstersDX(double maxdist = 0, int flags = 0)
+	{
+		A_alertmonsters(maxdist,flags);
+		
+		if(invoker.owner.findinventory("powerinvisibility"))
+		{
+			invoker.owner.giveinventory("moveblurspheretarget",1);
 		}
 	}
 	
@@ -2305,24 +2329,7 @@ PI2F K 0 {if (CountInv("Kicking") == 1) { if (CountInv("IsCrouching") == 1) { re
 		"####" A 0 BRIGHT A_FireProjectile("Taunter", -9, 0, -1, 0);
 		"####" A 0 BRIGHT A_FireProjectile("Taunter", 9, 0, -1, 0);
 		//"####" A 0 A_JumpIfInventory("GenderFemale", 1, "TauntFemale");
-		"####" A 0 A_Jump(256, "FuckYourself", "FhaccYoself", "GoFuckYourself", "GetOffScum");
-	
-		
-	FuckYourself:
-		"####" A 0 ACS_NamedExecute("InsultFuckYourself",0,0);
-        "####" B 0 A_PlaySound("FUCK1", 2);
-		Goto FinishTaunt;
-	FhaccYoself:
-		"####" A 0 ACS_NamedExecute("InsultFhaccYoself",0,0);
-        "####" B 0 A_PlaySound("FUCK3", 2);
-		Goto FinishTaunt;
-	GoFuckYourself:
-		"####" A 0 ACS_NamedExecute("InsultGoFuckYourself",0,0);
-        "####" B 0 A_PlaySound("FUCK4", 2);
-		Goto FinishTaunt;
-	GetOffScum:
-		"####" A 0 ACS_NamedExecute("InsultGetOffScum",0,0);
-        "####" B 0 A_PlaySound("FUCK2", 2);
+		"####" A 0 A_startsound("FUCK",2);
 	FinishTaunt:
 		"####" A 0 A_jumpif(invoker.handedness == 1, "Finishtauntleft");
 		
